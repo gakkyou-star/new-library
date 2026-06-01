@@ -78,7 +78,7 @@ main{max-width:1200px;margin:0 auto;padding:32px 20px 60px}
 .summary-card.plan-a .label{color:var(--plan-a-header)}.summary-card.plan-b .label{color:var(--plan-b-header)}.summary-card.plan-c .label{color:var(--plan-c-header)}
 .summary-card .concept{font-size:16px;font-weight:700;margin-bottom:6px}
 .summary-card p{font-size:16px;color:var(--color-fg-muted);line-height:1.65}
-.result-box{margin-top:20px;background:var(--color-primary-soft);border:1px solid var(--color-primary);border-radius:var(--radius);padding:16px 20px;font-size:17px;font-weight:600;color:var(--color-primary);text-align:center}
+.result-box{margin-top:20px;background:var(--color-primary-soft);border:1px solid var(--color-primary);border-radius:var(--radius);padding:16px 20px;font-size:17px;font-weight:600;color:var(--color-primary);text-align:left}
 .result-box.updated{background:var(--color-bg-subtle);border-color:var(--color-border);color:var(--color-fg)}
 
 /* 答申書セクション */
@@ -296,27 +296,25 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   <div class="summary-grid">
     <div class="summary-card plan-a">
       <div class="label">PLAN A ｜ ピュアモルトクラブハウス＋蔵書棟</div>
-      <div class="concept">北の知の殿堂</div>
+      <div class="concept">本のある暮らしが、ここから始まる。</div>
+      <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 8px">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
       <p>文化的価値・シンボリック性で突出し、答申書の多くの付帯意見（カフェ、バイオガス空調、格調ある施設、直営管理等）を実現できる。蔵書棟のみで<strong>85,000冊</strong>を収蔵する計画となり、現有蔵書をほぼ維持できる。供用開始が2030年度（最長）で実現リスクも高い。付帯意見充足：<strong>12/14</strong></p>
     </div>
     <div class="summary-card plan-b">
       <div class="label">PLAN B ｜ 現図書館跡地テナント（直営）</div>
-      <div class="concept">現図書館跡地の商業施設テナント</div>
+      <div class="concept">日常の動線に、本がある。</div>
+      <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 8px">商業施設と一体で、街なかに根づく図書館</div>
       <p>答申書<strong>第1候補地</strong>（現図書館周辺）への対応プランで、整備面積<strong>450㎡</strong>・約20,000冊規模の図書館を商業施設テナントとして<strong>直営</strong>で整備する。建物は民間施設だが図書館の運営は町が行う。事業費はテナント料（年額1,600万円、30年で約4億8,000万円）として計上され、初期コストは低いが継続的なランニングコストが発生する。付帯意見充足：<strong>4/14</strong></p>
     </div>
     <div class="summary-card plan-c">
       <div class="label">PLAN C ｜ 現図書館リノベーション</div>
-      <div class="concept">地に足のついた再生</div>
+      <div class="concept">工夫で、図書館を育てる。</div>
+      <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 8px">制約の中から生まれる、鹿追らしい図書館再生</div>
       <p>候補地第1位・リスク最小・コスト最低。既存建物の2階部分を活用したリノベーションにより現行<strong>86,000冊</strong>を維持する。一方、1F＋2F合計でも多機能化（カフェ、視聴覚室、YAコーナー等）の全面実現は困難であり、構造補強・昇降設備等の追加工事費が発生する。付帯意見充足：<strong>4/14</strong></p>
     </div>
   </div>
 
-  <div class="result-box updated">
-    📊 重み付き総合評価（答申書反映後）：
-    <strong style="color:var(--plan-a-header)">Plan A（3.20）</strong> ＝ <strong style="color:var(--plan-b-header)">Plan B（3.20）</strong>
-    ＞ Plan C（2.85）
-    ｜ 付帯意見整合性では <strong style="color:var(--plan-a-header)">Plan A が突出（12/14充足）</strong>
-  </div>
+
 
   <!-- プラン概要マトリックス -->
   <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:28px 0 14px">プラン一覧マトリックス</h3>
@@ -333,17 +331,17 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <tbody>
         <tr style="background:var(--color-bg-subtle)">
           <td><strong>プランの特徴</strong></td>
-          <td style="text-align:center;padding:14px 12px">
-            <div style="font-size:18px;font-weight:700;color:var(--plan-a-header);margin-bottom:4px">北の知の殿堂</div>
-            <div style="font-size:13px;color:var(--color-fg-muted)">道内随一の読書体験空間</div>
+          <td style="text-align:left;padding:14px 12px">
+            <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:4px">本のある暮らしが、ここから始まる。</div>
+            <div style="font-size:13px;color:var(--color-fg-muted)">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
           </td>
-          <td style="text-align:center;padding:14px 12px">
-            <div style="font-size:17px;font-weight:700;color:var(--plan-b-header);margin-bottom:4px">現図書館跡地の商業施設テナント</div>
-            <div style="font-size:13px;color:var(--color-fg-muted)">直営で集客と継続性を両立</div>
+          <td style="text-align:left;padding:14px 12px">
+            <div style="font-size:16px;font-weight:700;color:var(--plan-b-header);margin-bottom:4px">日常の動線に、本がある。</div>
+            <div style="font-size:13px;color:var(--color-fg-muted)">商業施設と一体で、街なかに根づく図書館</div>
           </td>
-          <td style="text-align:center;padding:14px 12px">
-            <div style="font-size:18px;font-weight:700;color:var(--plan-c-header);margin-bottom:4px">地に足のついた再生</div>
-            <div style="font-size:13px;color:var(--color-fg-muted)">既存ストック活用・2階改修</div>
+          <td style="text-align:left;padding:14px 12px">
+            <div style="font-size:16px;font-weight:700;color:var(--plan-c-header);margin-bottom:4px">工夫で、図書館を育てる。</div>
+            <div style="font-size:13px;color:var(--color-fg-muted)">制約の中から生まれる、鹿追らしい図書館再生</div>
           </td>
         </tr>
         <tr>
@@ -379,13 +377,13 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <tr>
           <td><strong>実現難易度<br><small style="font-weight:400;color:var(--color-fg-muted)">教育政策上の評価</small></strong></td>
           <td style="text-align:center">
-            <span style="background:var(--color-caution);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">高</span>
+            <span style="background:var(--color-caution);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">やや困難</span>
           </td>
           <td style="text-align:center">
-            <span style="background:var(--color-danger);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">最高</span>
+            <span style="background:var(--color-danger);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">非常に困難</span>
           </td>
           <td style="text-align:center">
-            <span style="background:var(--color-positive);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">低</span>
+            <span style="background:var(--color-positive);color:#fff;font-size:13px;font-weight:700;padding:5px 14px;border-radius:4px;display:inline-block">比較的容易</span>
           </td>
         </tr>
       </tbody>
@@ -521,7 +519,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="plan-card-header">
         <div class="plan-badge">PLAN A ｜ 第3候補地</div>
         <h3>ピュアモルトクラブハウス＋蔵書棟</h3>
-        <div class="concept-text">北の知の殿堂—道内随一の読書体験空間</div>
+        <div class="concept-text">本のある暮らしが、ここから始まる。<br><small style="font-weight:400">森と建築と本が出会う、北海道でいちばん美しい図書館</small></div>
       </div>
       <div class="plan-card-body">
         <div class="plan-stat-row"><span class="stat-label">整備面積</span><span class="stat-value">約850〜950㎡（蔵書棟）</span></div>
@@ -537,7 +535,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="plan-card-header">
         <div class="plan-badge">PLAN B ｜ 第1候補地（現図書館跡地）✅</div>
         <h3>現図書館跡地・商業施設テナント入居</h3>
-        <div class="concept-text">現図書館跡地の商業施設テナント—直営で集客と継続性を両立</div>
+        <div class="concept-text">日常の動線に、本がある。<br><small style="font-weight:400">商業施設と一体で、街なかに根づく図書館</small></div>
       </div>
       <div class="plan-card-body">
         <div class="plan-stat-row"><span class="stat-label">整備面積</span><span class="stat-value">450㎡（テナント面積）</span></div>
@@ -554,7 +552,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="plan-card-header">
         <div class="plan-badge">PLAN C ｜ 第1候補地（制約大）</div>
         <h3>現図書館リノベーション</h3>
-        <div class="concept-text">地に足のついた再生—既存ストック活用・2階改修</div>
+        <div class="concept-text">工夫で、図書館を育てる。<br><small style="font-weight:400">制約の中から生まれる、鹿追らしい図書館再生</small></div>
       </div>
       <div class="plan-card-body">
         <div class="plan-stat-row"><span class="stat-label">整備面積</span><span class="stat-value">約1,000㎡（既存1F＋2F改修）</span></div>
@@ -631,8 +629,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div class="info-box" style="margin-bottom:16px">
     <strong>スコア修正根拠：</strong>
-    Plan A 委員会整合性 2→<strong>3</strong>（候補地の一つ、付帯意見12/14充足）。
-    Plan B 委員会整合性：建設地が第1候補地（現図書館周辺）に変更され、直営運営も確定したことで主要課題は解消。現在は商業施設内という制約によるバイオガス空調・バンビ号車庫・格調ある施設の実現困難が残存課題。スコア（★1）は再評価が必要。
+    ④委員会整合性：Plan A→★3（候補地の一つ、付帯意見12/14充足）／Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）。
+    ⑤実現容易性：Plan B→★1（「非常に困難」評価と整合）。
   </div>
 
   <div class="table-wrap">
@@ -654,14 +652,14 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <tr><td>②初期投資コスト効率</td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.60</td></tr>
         <tr><td>③利用者集客・使用促進</td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.45</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
         <tr class="new-row"><td><strong>④建設委員会・付帯意見整合性 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid score-updated" style="text-align:center"><strong>★3↑</strong></td><td class="score-mid score-updated" style="text-align:center"><strong>0.45</strong></td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
-        <tr><td>⑤実現容易性・リスク管理</td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.45</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td></tr>
+        <tr class="new-row"><td><strong>⑤実現容易性・リスク管理 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td></tr>
         <tr><td>⑥事業期間（短縮評価）</td><td style="text-align:center;font-weight:700">10%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.20</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td></tr>
         <tr><td>⑦地域住民・社会的期待への対応</td><td style="text-align:center;font-weight:700">10%</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.50</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.30</td><td class="score-low" style="text-align:center">★1</td><td class="score-low" style="text-align:center">0.10</td></tr>
         <tr>
           <td><strong>総合スコア（満点5.00）</strong></td>
           <td style="text-align:center;font-weight:700">100%</td>
           <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-a-header)">3.20</td>
-          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-b-header)">3.20</td>
+          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-b-header)">2.90</td>
           <td colspan="2" class="score-total" style="text-align:center">2.85</td>
         </tr>
       </tbody>
@@ -670,8 +668,9 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div class="note" style="margin-top:16px">
     <strong>修正根拠：</strong>
-    ④委員会整合性：Plan A→★3（候補地の一つ＋付帯意見13/14充足）、Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難。スコアの見直し検討中）｜
-    結果：Plan A・Plan Bが同点（3.20）。付帯意見充足度・文化的価値・住民期待では<strong>Plan Aが突出</strong>。コスト・集客・スケジュールでは<strong>Plan Bが優位</strong>。
+    ④委員会整合性：Plan A→★3（候補地の一つ＋付帯意見12/14充足）、Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）｜
+    ⑤実現容易性：Plan B→★1に修正（「非常に困難」バッジとの整合）｜
+    結果：Plan A（3.20）＞ Plan B（2.90）＞ Plan C（2.85）。付帯意見充足度・文化的価値・住民期待では<strong>Plan Aが突出</strong>。コスト・集客・スケジュールでは<strong>Plan Bが優位</strong>。
   </div>
 </div>
 
@@ -859,14 +858,15 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;border-left:4px solid var(--plan-a-header)">
     <div style="font-size:14px;font-weight:700;color:var(--plan-a-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第3位 ｜ 付帯意見充足：12/14 ◎最高</div>
-    <div style="font-size:18px;font-weight:700;color:var(--color-fg);margin-bottom:6px">北の知の殿堂—道内随一の読書体験空間を鹿追から発信</div>
+    <div style="font-size:18px;font-weight:700;color:var(--color-fg);margin-bottom:2px">本のある暮らしが、ここから始まる。</div>
+    <div style="font-size:14px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
     <div style="font-size:16px;color:var(--color-fg-muted)">受賞歴ある建築物（北海道赤レンガ賞・日本公共建築賞）の歴史・文化性と純粋な読書環境の極みを融合。答申書が求める「格調の高い、町民の誇りとなる」施設像に最も合致するプラン。バイオガス空調・直営管理・格調ある施設等の付帯意見を実現できる。蔵書棟のみで<strong>85,000冊</strong>を収蔵し、現有蔵書をほぼ維持できる計画。</div>
   </div>
 
   <div class="success-box">答申書3コンセプトとの整合：①やさしい図書館 ◎（最高の読書環境）｜②学びが育つ ◎（格調ある書架・静謐空間）｜③交流が生まれる ◎（多目的ゾーニング可能）</div>
 
   <div style="background:var(--color-caution-soft);border:1px solid var(--color-caution);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-caution);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">実現難易度：高</div>
+    <div style="background:var(--color-caution);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">やや困難</div>
     <div style="font-size:15px;color:var(--color-fg)">現施設の基本理念を最大限に尊重しながら空調等の整備を行う必要があり、蔵書棟以外の整備についても十分な検討時間と整備コストが求められる。設計・施工の各段階で高度な調整が必要となる。</div>
   </div>
 
@@ -927,7 +927,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-b-header)">
     <div style="font-size:14px;font-weight:700;color:var(--plan-b-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：<span style="color:var(--plan-b-header)">第1候補地（現図書館周辺）✅</span> ｜ 付帯意見充足：4/14</div>
-    <div style="font-size:18px;font-weight:700;margin-bottom:6px">現図書館跡地の商業施設テナント—直営で集客と継続性を両立</div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:2px">日常の動線に、本がある。</div>
+    <div style="font-size:14px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">商業施設と一体で、街なかに根づく図書館</div>
     <div style="font-size:16px;color:var(--color-fg-muted)">現図書館の場所（答申書第1候補地）に新たな商業施設を建設し、整備面積<strong>450㎡・約20,000冊規模</strong>の図書館をテナントとして整備する。建物は民間施設だが、図書館の運営は町が直接行う（<strong>指定管理・PPP方式は採らない</strong>）。集客力のある商業施設との複合利用で「ついでに立ち寄る」文化を醸成。蔵書数は現有86,000冊から大幅に縮小する点が答申書との整合上の課題となる。</div>
   </div>
 
@@ -937,8 +938,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   </div>
 
   <div style="background:var(--color-danger-soft);border:1px solid var(--color-danger);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-danger);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">実現難易度：最高</div>
-    <div style="font-size:15px;color:var(--color-fg)">3プランの中で実現難易度が最も高い。事業費に見合う図書館としての文化的価値のストーリー構築が求められる一方、時間的制約の中で民間事業者が主体となる複雑な事業調整が必要となる。</div>
+    <div style="background:var(--color-danger);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">非常に困難</div>
+    <div style="font-size:15px;color:var(--color-fg)">3プランの中で最も実現が難しく、事業費に見合う図書館としての文化的価値のストーリー構築が求められる一方、時間的制約の中で民間事業者が主体となる複雑な事業調整が必要となる。</div>
   </div>
 
   <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
@@ -1000,15 +1001,16 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div style="background:var(--plan-c-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-c-header)">
     <div style="font-size:14px;font-weight:700;color:var(--plan-c-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第1位（制約大） ｜ 付帯意見充足：4/14</div>
-    <div style="font-size:18px;font-weight:700;margin-bottom:6px">地に足のついた再生—既存ストックの最大活用で確実な整備を実現</div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:2px">工夫で、図書館を育てる。</div>
+    <div style="font-size:14px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">制約の中から生まれる、鹿追らしい図書館再生</div>
     <div style="font-size:16px;color:var(--color-fg-muted)">候補地第1位・蔵書86,000冊維持・直営管理で答申書の基本方針に沿う。既存建物の<strong>2階部分を活用したリノベーション</strong>により収蔵・閲覧スペースを拡充する（整備面積：約1,000㎡）。一方、1F＋2F合計でも答申書が求めるカフェ・視聴覚室・YAコーナー等の多機能化の全面実現は困難で、<strong>構造補強・昇降設備等の追加工事費</strong>が発生する。</div>
   </div>
 
   <div class="info-box">答申書候補地第1位に相当。蔵書数・直営管理は適合。ただし2F改修に伴う<strong>構造補強・昇降設備（エレベーター等）の追加工事費</strong>が発生し、多機能要件（14項目中4項目のみ充足）の実現は困難。</div>
 
   <div style="background:var(--color-positive-soft);border:1px solid var(--color-positive);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-positive);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">実現難易度：低</div>
-    <div style="font-size:15px;color:var(--color-fg)">1階部分のみの整備に限定することで、3プランの中で実現難易度は最も低い。ただし、整備範囲を絞るほど答申書が求める複合機能との整合性確保が難しくなるトレードオフがある。</div>
+    <div style="background:var(--color-positive);color:#fff;font-size:13px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">比較的容易</div>
+    <div style="font-size:15px;color:var(--color-fg)">1階部分のみの整備に限定することで、3プランの中で最も実現しやすい。ただし、整備範囲を絞るほど答申書が求める複合機能との整合性確保が難しくなるトレードオフがある。</div>
   </div>
 
   <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
