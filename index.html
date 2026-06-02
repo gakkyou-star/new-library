@@ -249,6 +249,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 .legend-swatch{display:inline-block;width:20px;height:12px;border-radius:2px;flex-shrink:0}
 .gantt-note{font-size:12px;color:var(--color-fg-muted);margin-left:auto}
 .g-spacer td{height:36px;background:var(--color-bg);border-left:none;border-right:none;border-top:2px solid var(--color-border);border-bottom:none;padding:0}
+.g-grp-soko{background:#546E7A;color:#fff}
+.g-lbl-soko{color:#546E7A;border-left:5px solid #546E7A}
+.g-soko-c1{background:#ECEFF1;color:#37474F;font-size:12px}
+.g-soko-c2{background:#90A4AE;color:#fff}
+.g-soko-c3{background:#546E7A;color:#fff}
 </style>
 </head>
 <body>
@@ -361,7 +366,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <tr>
           <td><strong>工事スケジュール</strong></td>
           <td>構想：2026〜2027年度<br>設計：2028年度<br>工事：2029年度（1年間）<br>供用開始：<strong style="color:var(--plan-a-header)">2030年度</strong></td>
-          <td>構想：2026年度〜<br>設計：2026〜2027年度<br>工事：2028年度<br>供用開始：<strong style="color:var(--plan-b-header)">2029年度</strong></td>
+          <td>構想：2026年度〜<br>設計：2026〜2027年度<br>工事：2028年度Q1〜Q3<br>供用開始：<strong style="color:var(--plan-b-header)">2028年度Q4</strong></td>
           <td>構想：2026年度〜<br>設計：2027〜2028年度<br>工事：2028年度<br>供用開始：<strong style="color:var(--plan-c-header)">2029年度</strong></td>
         </tr>
         <tr>
@@ -543,7 +548,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="plan-card-body">
         <div class="plan-stat-row"><span class="stat-label">整備面積</span><span class="stat-value">450㎡（テナント面積）</span></div>
         <div class="plan-stat-row"><span class="stat-label">計画蔵書数</span><span class="stat-value" style="color:var(--color-caution)">50,000冊（開架30,000冊＋閉架20,000冊）</span></div>
-        <div class="plan-stat-row"><span class="stat-label">供用開始</span><span class="stat-value" style="color:var(--plan-b-header);font-weight:700">2029年度</span></div>
+        <div class="plan-stat-row"><span class="stat-label">供用開始</span><span class="stat-value" style="color:var(--plan-b-header);font-weight:700">2028年度Q4</span></div>
         <div class="plan-stat-row"><span class="stat-label">管理形態</span><span class="stat-value">町（直営）<span class="stat-ok">✅答申推奨</span></span></div>
         <div class="plan-stat-row"><span class="stat-label">年間テナント料</span><span class="stat-value" style="color:var(--color-caution);font-weight:700">1,600万円/年（30年：約4億8,000万円）</span></div>
         <div class="plan-stat-row"><span class="stat-label">付帯意見充足</span><span class="stat-value" style="color:var(--color-caution);font-weight:700">4 / 14項目</span></div>
@@ -739,13 +744,24 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         </tr>
       </thead>
       <tbody>
+        <!-- 書庫整備（旧幼稚園） -->
+        <tr><td class="g-grp g-grp-soko" colspan="17">■ 書庫整備（旧幼稚園）　→ この後、第2庁舎解体へと進む</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-soko">構想・改修・書類移動</td>
+          <td class="g-soko-c1">構想</td>
+          <td class="g-soko-c2 g-bar">改修工事</td>
+          <td class="g-soko-c3 g-bar">書類移動</td>
+          <td class="g-empty" colspan="13"></td>
+        </tr>
+        <!-- spacer -->
+        <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- 解体撤去（PlanA・B） -->
         <tr><td class="g-grp g-grp-com" colspan="17">■ 解体撤去工事（Plan A・Plan B）</td></tr>
         <tr>
           <td class="g-lbl g-lbl-com">構想・設計・工事</td>
           <td class="g-com-c1">構想</td>
-          <td class="g-com-c2 g-bar" colspan="2">設計</td>
-          <td class="g-com-c3 g-bar" colspan="4">工事（2027年度）</td>
+          <td class="g-com-c2 g-bar" colspan="3">設計（〜2027Q1）</td>
+          <td class="g-com-c3 g-bar" colspan="3">工事（2027年度Q2〜Q4）</td>
           <td class="g-empty" colspan="9"></td>
         </tr>
         <!-- spacer -->
@@ -762,15 +778,15 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- Plan B -->
-        <tr><td class="g-grp g-grp-b" colspan="17">■ Plan B　現図書館跡地テナント入居（直営）　（供用：2029年度）</td></tr>
+        <tr><td class="g-grp g-grp-b" colspan="17">■ Plan B　現図書館跡地テナント入居（直営）　（供用：2028年度Q4）</td></tr>
         <tr>
           <td class="g-lbl g-lbl-b">構想・設計・工事</td>
           <td class="g-b-c1">構想</td>
           <td class="g-b-prop g-bar" colspan="2">プロポーザル・事業者選定</td>
           <td class="g-b-c2 g-bar" colspan="4">設計（〜2027年度）</td>
-          <td class="g-b-c3 g-bar" colspan="4">工事（2028年度）</td>
+          <td class="g-b-c3 g-bar" colspan="3">工事（2028年度Q1〜Q3）</td>
           <td class="g-ms-b">★<br><small>供用</small></td>
-          <td class="g-empty" colspan="4"></td>
+          <td class="g-empty" colspan="5"></td>
         </tr>
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
@@ -779,7 +795,9 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <tr>
           <td class="g-lbl g-lbl-c">構想・設計・工事</td>
           <td class="g-c-c1" colspan="3">構想</td>
-          <td class="g-c-c2 g-bar" colspan="4">設計（〜2027年度）</td>
+          <td class="g-empty">　</td>
+          <td class="g-c-c2 g-bar" colspan="2">設計（2027年度Q2〜Q3）</td>
+          <td class="g-empty">　</td>
           <td class="g-c-c3 g-bar" colspan="4">工事（2028年度）</td>
           <td class="g-ms-c">★<br><small>供用</small></td>
           <td class="g-empty" colspan="4"></td>
@@ -809,13 +827,13 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       </thead>
       <tbody>
         <tr><td style="font-weight:700">構想</td><td><span class="schedule-a">2026年度 Q2〜2027年度 Q4</span></td><td><span class="schedule-b">2026年度 Q2</span></td><td><span class="schedule-c">2026年度 Q2〜Q4</span></td><td><span class="schedule-com">2026年度 Q2</span></td></tr>
-        <tr><td style="font-weight:700">設計</td><td><span class="schedule-a">2028年度 Q1〜Q4</span></td><td><span class="schedule-b">2026年度 Q3〜2027年度 Q4</span></td><td><span class="schedule-c">2027年度 Q1〜Q4</span></td><td><span class="schedule-com">2026年度 Q3〜Q4</span></td></tr>
-        <tr><td style="font-weight:700">工事</td><td><span class="schedule-a">2029年度（1年間）</span></td><td><span class="schedule-b">2028年度</span></td><td><span class="schedule-c">2028年度</span></td><td><span class="schedule-com">2027年度</span></td></tr>
-        <tr><td style="font-weight:700">供用開始</td><td style="text-align:center"><strong style="color:var(--plan-a-header);font-size:17px">2030年度</strong></td><td style="text-align:center"><strong style="color:var(--plan-b-header);font-size:17px">2029年度</strong></td><td style="text-align:center"><strong style="color:var(--plan-c-header);font-size:17px">2029年度</strong></td><td style="text-align:center">—</td></tr>
+        <tr><td style="font-weight:700">設計</td><td><span class="schedule-a">2028年度 Q1〜Q4</span></td><td><span class="schedule-b">2026年度 Q3〜2027年度 Q4</span></td><td><span class="schedule-c">2027年度 Q2〜Q3</span></td><td><span class="schedule-com">2026年度 Q3〜2027年度 Q1</span></td></tr>
+        <tr><td style="font-weight:700">工事</td><td><span class="schedule-a">2029年度（1年間）</span></td><td><span class="schedule-b">2028年度 Q1〜Q3</span></td><td><span class="schedule-c">2028年度</span></td><td><span class="schedule-com">2027年度 Q2〜Q4</span></td></tr>
+        <tr><td style="font-weight:700">供用開始</td><td style="text-align:center"><strong style="color:var(--plan-a-header);font-size:17px">2030年度</strong></td><td style="text-align:center"><strong style="color:var(--plan-b-header);font-size:17px">2028年度Q4</strong></td><td style="text-align:center"><strong style="color:var(--plan-c-header);font-size:17px">2029年度</strong></td><td style="text-align:center">—</td></tr>
       </tbody>
     </table>
   </div>
-  <div class="warning-box" style="margin-top:12px">⚠ Plan Aは2029年度の<strong>1年間工事</strong>（B・Cと同じ工期）。ただし供用開始は2030年度とB・Cより1年遅い。長期休館を避けるため<strong>臨時図書館の設置計画が必須</strong>。</div>
+  <div class="warning-box" style="margin-top:12px">⚠ Plan Aは2029年度の<strong>1年間工事</strong>。供用開始は2030年度でB・Cより遅い。長期休館を避けるため<strong>臨時図書館の設置計画が必須</strong>。Plan Bは2028年度Q4に最速供用開始（B・Cの中で最短）。</div>
 </div>
 
 <!-- 規模・面積 -->
@@ -970,7 +988,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <li>商業施設からの自然な来館誘導</li>
         <li>民間建設でイニシャルコストを抑制</li>
         <li>直営運営により答申書推奨の管理形態を実現 ✅</li>
-        <li>供用開始2029年度（Plan Aより1年早い）</li>
+        <li>供用開始2028年度Q4（Plan A・Cより早い）</li>
       </ul>
     </div>
     <div class="cons-box">
