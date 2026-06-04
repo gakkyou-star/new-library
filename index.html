@@ -87,14 +87,14 @@ header .update-badge{display:inline-block;background:rgba(255,255,255,.15);borde
 
 /* サマリー */
 .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}
-.summary-card{border-radius:var(--radius);padding:18px 20px;border-left:4px solid;display:flex;flex-direction:column}
-.summary-card-header{min-height:170px;margin-bottom:4px}
+.summary-card{border-radius:var(--radius);padding:26px 28px;border-left:5px solid;display:flex;flex-direction:column}
+.summary-card-header{min-height:210px;margin-bottom:8px}
 .summary-card.plan-a{background:var(--plan-a-soft);border-color:var(--plan-a-header)}
 .summary-card.plan-b{background:var(--plan-b-soft);border-color:var(--plan-b-header)}
 .summary-card.plan-c{background:var(--plan-c-soft);border-color:var(--plan-c-header)}
-.summary-card .label{font-size:13px;font-weight:700;margin-bottom:6px;min-height:48px}
+.summary-card .label{font-size:15px;font-weight:700;margin-bottom:8px;min-height:58px}
 .summary-card.plan-a .label{color:var(--plan-a-header)}.summary-card.plan-b .label{color:var(--plan-b-header)}.summary-card.plan-c .label{color:var(--plan-c-header)}
-.summary-card .concept{font-size:17px;font-weight:700;margin-bottom:6px;min-height:62px}
+.summary-card .concept{font-size:24px;font-weight:700;margin-bottom:8px;min-height:80px;line-height:1.4}
 .summary-card p{font-size:16px;color:var(--color-fg-muted);line-height:1.65}
 .result-box{margin-top:20px;background:var(--color-primary-soft);border:1px solid var(--color-primary);border-radius:var(--radius);padding:16px 20px;font-size:17px;font-weight:600;color:var(--color-primary);text-align:left}
 .result-box.updated{background:var(--color-bg-subtle);border-color:var(--color-border);color:var(--color-fg)}
@@ -351,30 +351,30 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   </h2>
 
   <!-- 現図書館の現状と課題 -->
-  <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:20px 24px;margin-bottom:28px">
-    <div style="font-size:13px;font-weight:700;color:var(--color-fg-muted);letter-spacing:.06em;margin-bottom:12px">📍 前提：現図書館の現状（なぜ建て替えが必要か）</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:14px">
-      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:3px solid var(--color-danger)">
-        <div style="font-size:12px;color:var(--color-fg-muted);margin-bottom:4px">建設年</div>
-        <div style="font-size:18px;font-weight:700;color:var(--color-danger)">築45年</div>
-        <div style="font-size:12px;color:var(--color-fg-muted)">昭和56年（1981年）建設</div>
+  <div style="background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:28px 36px;margin-bottom:32px">
+    <div style="font-size:16px;font-weight:700;color:var(--color-fg-muted);letter-spacing:.04em;margin-bottom:16px">📍 前提：現図書館の現状（なぜ建て替えが必要か）</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-bottom:18px">
+      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:4px solid var(--color-danger)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:6px">建設年</div>
+        <div style="font-size:32px;font-weight:700;color:var(--color-danger);line-height:1.2">築45年</div>
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-top:4px">昭和56年（1981年）建設</div>
       </div>
-      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:3px solid var(--color-caution)">
-        <div style="font-size:12px;color:var(--color-fg-muted);margin-bottom:4px">現有蔵書数</div>
-        <div style="font-size:18px;font-weight:700;color:var(--color-caution)">86,000冊</div>
-        <div style="font-size:12px;color:var(--color-fg-muted)">開架61,000冊 / 書庫25,000冊</div>
+      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:4px solid var(--color-caution)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:6px">現有蔵書数</div>
+        <div style="font-size:32px;font-weight:700;color:var(--color-caution);line-height:1.2">86,000冊</div>
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-top:4px">開架61,000冊 / 書庫25,000冊</div>
       </div>
-      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:3px solid var(--color-caution)">
-        <div style="font-size:12px;color:var(--color-fg-muted);margin-bottom:4px">開架面積</div>
-        <div style="font-size:18px;font-weight:700;color:var(--color-caution)">312㎡</div>
-        <div style="font-size:12px;color:var(--color-fg-muted)">地震時の安全に懸念</div>
+      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:4px solid var(--color-caution)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:6px">開架面積</div>
+        <div style="font-size:32px;font-weight:700;color:var(--color-caution);line-height:1.2">312㎡</div>
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-top:4px">地震時の安全に懸念</div>
       </div>
-      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:3px solid var(--color-danger)">
-        <div style="font-size:12px;color:var(--color-fg-muted);margin-bottom:4px">主な課題</div>
-        <div style="font-size:14px;font-weight:700;color:var(--color-danger);line-height:1.5">空調なし<br>バリアフリー困難<br>トイレ不便・狭隘</div>
+      <div style="background:var(--color-bg-surface);border-radius:var(--radius);padding:12px 14px;border-top:4px solid var(--color-danger)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:6px">主な課題</div>
+        <div style="font-size:18px;font-weight:700;color:var(--color-danger);line-height:1.7">空調なし<br>バリアフリー困難<br>トイレ不便・狭隘</div>
       </div>
     </div>
-    <div style="font-size:14px;color:var(--color-fg-muted);line-height:1.7">
+    <div style="font-size:16px;color:var(--color-fg-muted);line-height:1.75">
       ▶ 各プランの検討は、この現図書館を<strong>どう更新・移転・改修するか</strong>という問いへの回答です。
       蔵書86,000冊の維持・継続サービスの確保・答申書コンセプトの実現を軸に3案を比較します。
     </div>
@@ -387,30 +387,30 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="summary-card-header">
         <div class="label">PLAN A ｜ ピュアモルトクラブハウス＋蔵書棟</div>
         <div class="concept">本のある暮らしが、ここから始まる。</div>
-        <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 0">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
+        <div style="font-size:15px;font-style:italic;color:var(--color-fg-muted);margin:0 0 0">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">計画蔵書数</div>
-          <div style="font-size:15px;font-weight:700;color:var(--plan-a-header)">85,000冊</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">計画蔵書数</div>
+          <div style="font-size:21px;font-weight:700;color:var(--plan-a-header)">85,000冊</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">付帯意見充足</div>
-          <div style="font-size:15px;font-weight:700;color:var(--plan-a-header)">12/14 ◎最高</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">付帯意見充足</div>
+          <div style="font-size:21px;font-weight:700;color:var(--plan-a-header)">12/14 ◎最高</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">供用開始</div>
-          <div style="font-size:15px;font-weight:700">2030年度</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">供用開始</div>
+          <div style="font-size:21px;font-weight:700">2030年度</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">一般財源率</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-positive)">21.6% ◎最小</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">一般財源率</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-positive)">21.6% ◎最小</div>
         </div>
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px;margin-bottom:6px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
         ✅ <strong>強み：</strong>補助金＋過疎債の二重活用で実質地方負担が3プラン中最小
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
         ⚠️ <strong>リスク：</strong>供用開始が最遅（2030年）・合意形成の調整が最も複雑
       </div>
     </div>
@@ -420,30 +420,30 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="summary-card-header">
         <div class="label">PLAN B ｜ 現図書館跡地テナント（直営）</div>
         <div class="concept">日常の動線に、本がある。</div>
-        <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 0">商業施設と一体で、街なかに根づく図書館</div>
+        <div style="font-size:15px;font-style:italic;color:var(--color-fg-muted);margin:0 0 0">商業施設と一体で、街なかに根づく図書館</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">計画蔵書数</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-caution)">50,000冊</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">計画蔵書数</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-caution)">50,000冊</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">付帯意見充足</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-caution)">4/14</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">付帯意見充足</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-caution)">4/14</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">供用開始</div>
-          <div style="font-size:15px;font-weight:700;color:var(--plan-b-header)">2028年Q4 最速</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">供用開始</div>
+          <div style="font-size:21px;font-weight:700;color:var(--plan-b-header)">2028年Q4 最速</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">一般財源率</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-danger)">100% 最大</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">一般財源率</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-danger)">100% 最大</div>
         </div>
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px;margin-bottom:6px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
         ✅ <strong>強み：</strong>答申書第1候補地・3プラン中最速開館（2028年Q4）
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
         ⚠️ <strong>リスク：</strong>テナント料1,600万円/年が毎年継続・一般財源負担100%
       </div>
     </div>
@@ -453,30 +453,30 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <div class="summary-card-header">
         <div class="label">PLAN C ｜ 現図書館リノベーション</div>
         <div class="concept">工夫で、図書館を育てる。</div>
-        <div style="font-size:13px;font-style:italic;color:var(--color-fg-muted);margin:-2px 0 0">制約の中から生まれる、鹿追らしい図書館再生</div>
+        <div style="font-size:15px;font-style:italic;color:var(--color-fg-muted);margin:0 0 0">制約の中から生まれる、鹿追らしい図書館再生</div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:12px">
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">計画蔵書数</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-caution)">約44,000冊</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px">
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">計画蔵書数</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-caution)">約44,000冊</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">付帯意見充足</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-caution)">4/14</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">付帯意見充足</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-caution)">4/14</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">供用開始</div>
-          <div style="font-size:15px;font-weight:700">2029年度</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">供用開始</div>
+          <div style="font-size:21px;font-weight:700">2029年度</div>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:6px;padding:7px 10px">
-          <div style="font-size:11px;color:var(--color-fg-muted)">一般財源率</div>
-          <div style="font-size:15px;font-weight:700;color:var(--color-caution)">37.0%</div>
+        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:12px 14px">
+          <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:4px">一般財源率</div>
+          <div style="font-size:21px;font-weight:700;color:var(--color-caution)">37.0%</div>
         </div>
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px;margin-bottom:6px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
         ✅ <strong>強み：</strong>第1候補地・リスク最小・一般財源実質負担が3プラン中最低
       </div>
-      <div style="font-size:13px;background:rgba(255,255,255,.5);border-radius:6px;padding:7px 10px">
+      <div style="font-size:15px;background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
         ⚠️ <strong>リスク：</strong>現有86,000冊から約42,000冊の除籍整理が必要・昇降設備費は別途
       </div>
     </div>
@@ -1619,22 +1619,22 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px">
     <div style="background:var(--color-positive-soft);border-top:4px solid var(--color-positive);border-radius:var(--radius);padding:14px 16px">
       <div style="font-size:12px;font-weight:700;color:var(--color-positive);margin-bottom:6px">① 集約化・複合化事業</div>
-      <div style="font-size:15px;font-weight:700;margin-bottom:4px">交付税措置：50%</div>
+      <div style="font-size:21px;font-weight:700;margin-bottom:4px">交付税措置：50%</div>
       <div style="font-size:13px;color:var(--color-fg-muted)">複数施設を集約・複合化する事業。充当率90%。<strong>面積削減が条件。</strong></div>
     </div>
     <div style="background:var(--color-primary-soft);border-top:4px solid var(--color-primary);border-radius:var(--radius);padding:14px 16px">
       <div style="font-size:12px;font-weight:700;color:var(--color-primary);margin-bottom:6px">② 転用事業</div>
-      <div style="font-size:15px;font-weight:700;margin-bottom:4px">交付税措置：40%</div>
+      <div style="font-size:21px;font-weight:700;margin-bottom:4px">交付税措置：40%</div>
       <div style="font-size:13px;color:var(--color-fg-muted)">既存施設を用途転換する事業。充当率90%。</div>
     </div>
     <div style="background:var(--color-caution-soft);border-top:4px solid var(--color-caution);border-radius:var(--radius);padding:14px 16px">
       <div style="font-size:12px;font-weight:700;color:var(--color-caution);margin-bottom:6px">③ 除却事業</div>
-      <div style="font-size:15px;font-weight:700;margin-bottom:4px">交付税措置：50%<br><small style="font-weight:400">（単独除却は措置なし）</small></div>
+      <div style="font-size:21px;font-weight:700;margin-bottom:4px">交付税措置：50%<br><small style="font-weight:400">（単独除却は措置なし）</small></div>
       <div style="font-size:13px;color:var(--color-fg-muted)">老朽化施設の解体除却。集約化等に伴う除却は50%措置。単独除却は措置なし。</div>
     </div>
     <div style="background:var(--color-bg-subtle);border-top:4px solid var(--color-border);border-radius:var(--radius);padding:14px 16px">
       <div style="font-size:12px;font-weight:700;color:var(--color-fg-muted);margin-bottom:6px">④ 長寿命化事業</div>
-      <div style="font-size:15px;font-weight:700;margin-bottom:4px">交付税措置：30%</div>
+      <div style="font-size:21px;font-weight:700;margin-bottom:4px">交付税措置：30%</div>
       <div style="font-size:13px;color:var(--color-fg-muted)">長寿命化計画に基づく改修。充当率90%。</div>
     </div>
   </div>
