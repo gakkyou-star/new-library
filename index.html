@@ -82,23 +82,24 @@ header .update-badge{display:inline-block;background:rgba(255,255,255,.15);borde
 
 .section{background:var(--color-bg-surface);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:32px;margin-bottom:32px}
 .section-title{font-size:20px;font-weight:700;color:var(--color-primary);border-left:5px solid var(--color-primary);padding-left:14px;margin-bottom:24px;line-height:1.4}
+* + .section-title{margin-top:48px}
 .section-title .num{color:var(--color-fg-muted);font-size:16px;display:block;font-weight:600;letter-spacing:.06em;margin-bottom:2px}
 .section-title .new-badge{background:var(--color-danger);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
 .section-title .update-badge-sm{background:var(--color-primary);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle}
 
 /* サマリー */
 .summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
-.summary-card{border-radius:var(--radius);padding:26px 28px;border-left:5px solid;display:flex;flex-direction:column}
+.summary-card{border-radius:var(--radius);padding:26px 28px;border-left:5px solid;display:flex;flex-direction:column;background:#FFFFFF;border-top:1px solid var(--color-border);border-right:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
 .summary-card-header{min-height:210px;margin-bottom:8px}
-.summary-card.plan-a{background:var(--plan-a-soft);border-color:var(--plan-a-header)}
-.summary-card.plan-b{background:var(--plan-b-soft);border-color:var(--plan-b-header)}
-.summary-card.plan-c{background:var(--plan-c-soft);border-color:var(--plan-c-header)}
-.summary-card .label{font-size:clamp(12px,0.9vw + 5px,15px);font-weight:700;margin-bottom:8px;min-height:58px}
+.summary-card.plan-a{border-left-color:var(--plan-a-header)}
+.summary-card.plan-b{border-left-color:var(--plan-b-header)}
+.summary-card.plan-c{border-left-color:var(--plan-c-header)}
+.summary-card .label{font-size:clamp(12px,0.9vw + 5px,15px);font-weight:700;margin-bottom:8px;min-height:58px;color:var(--color-fg)}
 .summary-card.plan-a .label{color:var(--plan-a-header)}.summary-card.plan-b .label{color:var(--plan-b-header)}.summary-card.plan-c .label{color:var(--plan-c-header)}
 .summary-card .concept{font-size:clamp(14px,1.5vw + 8px,24px);font-weight:700;margin-bottom:8px;min-height:80px;line-height:1.4}
 .summary-card p{font-size:16px;color:var(--color-fg-muted);line-height:1.65}
-.result-box{margin-top:20px;background:var(--color-primary-soft);border:1px solid var(--color-primary);border-radius:var(--radius);padding:16px 20px;font-size:17px;font-weight:600;color:var(--color-primary);text-align:left}
-.result-box.updated{background:var(--color-bg-subtle);border-color:var(--color-border);color:var(--color-fg)}
+.result-box{margin-top:20px;background:#EDECEA;border:1px solid #B0AAA4;border-radius:var(--radius);padding:16px 20px;font-size:17px;font-weight:600;color:var(--color-fg);text-align:left}
+.result-box.updated{background:#EDECEA;border-color:#B0AAA4;color:var(--color-fg)}
 
 /* 答申書セクション */
 .toshinsho-banner{background:var(--color-primary);color:#fff;border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:12px}
@@ -112,35 +113,45 @@ header .update-badge{display:inline-block;background:rgba(255,255,255,.15);borde
 .rank-1{background:var(--color-primary)}.rank-2{background:#617279}.rank-3{background:var(--plan-c-header)}
 .rank-none{background:var(--color-danger);font-size:16px}
 .candidate-item .info{flex:1}.candidate-item .plan-tag{font-size:16px;font-weight:700;padding:2px 8px;border-radius:10px;margin-left:8px}
-.candidate-1{background:var(--color-primary-soft);border-left:4px solid var(--color-primary)}
-.candidate-2{background:var(--color-bg-subtle);border-left:4px solid #617279}
-.candidate-3{background:var(--plan-c-soft);border-left:4px solid var(--plan-c-header)}
+.candidate-1{background:#EDECEA;border-left:4px solid var(--color-primary)}
+.candidate-2{background:#F0EFED;border-left:4px solid #617279}
+.candidate-3{background:#F0EFED;border-left:4px solid #8A9BA0}
 .candidate-none{background:var(--color-danger-soft);border-left:4px solid var(--color-danger)}
 
 /* チェックリスト凡例 */
 .check-legend{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:16px}
 .check-legend span{padding:3px 10px;border-radius:12px;font-weight:700}
 .ck-s{background:var(--color-positive-soft);color:var(--color-positive)}
-.ck-o{background:var(--color-primary-soft);color:var(--color-primary)}
+.ck-o{background:#E4E2DE;color:var(--color-fg-muted)}
 .ck-t{background:var(--color-caution-soft);color:var(--color-caution)}
 .ck-x{background:var(--color-danger-soft);color:var(--color-danger)}
 
 /* 警告ボックス */
 .warning-box{background:var(--color-caution-soft);border:1px solid var(--color-caution);border-radius:var(--radius);padding:14px 18px;margin:14px 0;font-size:16px;color:var(--color-caution);line-height:1.65}
 .warning-box strong{color:var(--color-caution)}
-.info-box{background:var(--color-primary-soft);border-left:4px solid var(--color-primary);border-radius:var(--radius);padding:14px 18px;margin:14px 0;font-size:16px;color:var(--color-primary);line-height:1.65}
+.info-box{background:#F0EFED;border-left:4px solid #8A9BA0;border-radius:var(--radius);padding:14px 18px;margin:14px 0;font-size:16px;color:var(--color-fg);line-height:1.65}
 .success-box{background:var(--color-positive-soft);border-left:4px solid var(--color-positive);border-radius:var(--radius);padding:14px 18px;margin:14px 0;font-size:16px;color:var(--color-positive);line-height:1.65}
 
 /* プランカード */
 .plan-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.plan-card{border-radius:var(--radius-lg);border:2px solid;overflow:hidden;box-shadow:var(--shadow)}
-.plan-card.plan-a{border-color:var(--plan-a-header)}.plan-card.plan-b{border-color:var(--plan-b-header)}.plan-card.plan-c{border-color:var(--plan-c-header)}
-.plan-card-header{padding:16px 20px;color:#fff}
-.plan-card.plan-a .plan-card-header{background:var(--plan-a-header)}.plan-card.plan-b .plan-card-header{background:var(--plan-b-header)}.plan-card.plan-c .plan-card-header{background:var(--plan-c-header)}
-.plan-badge{display:inline-block;background:rgba(255,255,255,.25);font-size:16px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:6px}
-.plan-card-header h3{font-size:18px;font-weight:700;margin-bottom:4px;line-height:1.4}
-.plan-card-header .concept-text{font-size:16px;opacity:.9}
+.plan-card{border-radius:var(--radius-lg);border:1px solid var(--color-border);border-left:5px solid;overflow:hidden;box-shadow:var(--shadow-sm)}
+.plan-card.plan-a{border-left-color:var(--plan-a-header)}.plan-card.plan-b{border-left-color:var(--plan-b-header)}.plan-card.plan-c{border-left-color:var(--plan-c-header)}
+.plan-card-header{padding:16px 20px;background:#F5F4F2;border-bottom:1px solid var(--color-border)}
+.plan-card.plan-a .plan-card-header{background:#F5F4F2}.plan-card.plan-b .plan-card-header{background:#F5F4F2}.plan-card.plan-c .plan-card-header{background:#F5F4F2}
+.plan-badge{display:inline-block;background:rgba(0,0,0,.08);font-size:16px;font-weight:700;padding:2px 10px;border-radius:12px;margin-bottom:6px;color:var(--color-fg)}
+.plan-card-header h3{font-size:18px;font-weight:700;margin-bottom:4px;line-height:1.4;color:var(--color-fg)}
+.plan-card-header .concept-text{font-size:16px;color:var(--color-fg-muted)}
 .plan-card-body{padding:16px 20px;background:var(--color-bg-surface)}
+
+/* サマリーカード内 stat行 */
+.sc-stat-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--color-border-subtle)}
+.sc-stat-row:last-child{border-bottom:none}
+.sc-stat-label{font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0}
+.sc-stat-value{font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap}
+.sc-stat-wrap{display:flex;flex-direction:column;margin-bottom:16px;border-top:1px solid var(--color-border-subtle)}
+
+/* サマリーカード内 強み・リスク行 */
+.sc-note-row{font-size:clamp(12px,0.8vw+5px,15px);padding:10px 0;border-top:1px solid var(--color-border-subtle);line-height:1.6}
 .plan-stat-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px}
 .plan-stat-row:last-child{border-bottom:none}
 .plan-stat-row .stat-label{color:var(--color-fg-muted)}
@@ -152,27 +163,27 @@ header .update-badge{display:inline-block;background:rgba(255,255,255,.15);borde
 /* テーブル */
 .table-wrap{overflow-x:auto;margin-top:16px;-webkit-overflow-scrolling:touch}
 table{width:100%;border-collapse:collapse;font-size:16px;min-width:500px}
-thead tr{background:var(--color-primary)}
+thead tr{background:#3A4A4F}
 thead th{color:#fff;padding:12px 14px;text-align:left;font-weight:600;font-size:16px;white-space:nowrap}
-tbody tr:nth-child(even){background:var(--color-bg-subtle)}
-tbody tr:hover{background:var(--color-primary-soft)}
+tbody tr:nth-child(even){background:#F5F4F2}
+tbody tr:hover{background:#EDECEA}
 tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var(--color-fg);vertical-align:middle;line-height:1.55}
-.th-a{background:var(--plan-a-header)!important}.th-b{background:var(--plan-b-header)!important}.th-c{background:var(--plan-c-header)!important}
+.th-a{background:#3A4A4F!important;border-bottom:3px solid var(--plan-a-header)!important}.th-b{background:#3A4A4F!important;border-bottom:3px solid var(--plan-b-header)!important}.th-c{background:#3A4A4F!important;border-bottom:3px solid var(--plan-c-header)!important}
 .score-high{background:var(--color-positive-soft);font-weight:700;color:var(--color-positive)}
 .score-mid{background:var(--color-caution-soft);font-weight:700;color:var(--color-caution)}
 .score-low{background:var(--color-danger-soft);font-weight:700;color:var(--color-danger)}
-.score-total{background:var(--color-primary-soft);font-weight:700;font-size:18px;color:var(--color-primary)}
+.score-total{background:#E8E6E2;font-weight:700;font-size:18px;color:var(--color-fg);border-top:2px solid var(--color-border)}
 .score-updated{outline:2px solid var(--color-primary)!important}
 .risk-badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:16px;font-weight:700;white-space:nowrap}
 .risk-red{background:var(--color-danger-soft);color:var(--color-danger)}.risk-orange{background:var(--color-caution-soft);color:var(--color-caution)}.risk-yellow{background:#EDE0C4;color:#7A5820}
-.new-row{background:var(--color-bg-subtle)!important}
+.new-row{background:#F5F4F2!important}
 
 /* 長所懸念点 */
 .pros-cons-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
 @media(max-width:600px){.pros-cons-grid{grid-template-columns:1fr}}
 .pros-box,.cons-box{border-radius:var(--radius);padding:14px 16px}
-.pros-box{background:var(--color-positive-soft);border-left:4px solid var(--color-positive)}.cons-box{background:var(--color-caution-soft);border-left:4px solid var(--color-caution)}
-.pros-box h4{color:var(--color-positive);font-size:16px;font-weight:700;margin-bottom:8px}
+.pros-box{background:#F0EFED;border-left:4px solid #8A9BA0}.cons-box{background:var(--color-caution-soft);border-left:4px solid var(--color-caution)}
+.pros-box h4{color:var(--color-fg);font-size:16px;font-weight:700;margin-bottom:8px}
 .cons-box h4{color:var(--color-caution);font-size:16px;font-weight:700;margin-bottom:8px}
 .pros-box ul,.cons-box ul{list-style:none}
 .pros-box ul li,.cons-box ul li{font-size:16px;padding:3px 0 3px 18px;position:relative;line-height:1.55}
@@ -182,16 +193,16 @@ tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var
 
 /* 付帯意見チェック */
 .check-s{background:var(--color-positive-soft);color:var(--color-positive);font-weight:700;text-align:center}
-.check-o{background:var(--color-primary-soft);color:var(--color-primary);font-weight:700;text-align:center}
+.check-o{background:#E4E2DE;color:var(--color-fg-muted);font-weight:700;text-align:center}
 .check-t{background:var(--color-caution-soft);color:var(--color-caution);font-weight:700;text-align:center}
 .check-x{background:var(--color-danger-soft);color:var(--color-danger);font-weight:700;text-align:center}
 .check-row-critical td{border-left:3px solid var(--color-danger)}
 
 /* スケジュール */
-.schedule-a{background:var(--plan-a-soft);color:var(--plan-a-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px}
-.schedule-b{background:var(--plan-b-soft);color:var(--plan-b-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px}
-.schedule-c{background:var(--plan-c-soft);color:var(--plan-c-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px}
-.schedule-com{background:var(--color-bg-subtle);color:var(--color-fg-muted);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px}
+.schedule-a{background:#E4E2DE;color:var(--plan-a-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px;border-left:3px solid var(--plan-a-header)}
+.schedule-b{background:#E4E2DE;color:var(--plan-b-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px;border-left:3px solid var(--plan-b-header)}
+.schedule-c{background:#E4E2DE;color:var(--plan-c-header);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px;border-left:3px solid var(--plan-c-header)}
+.schedule-com{background:#EDECEA;color:var(--color-fg-muted);font-weight:600;border-radius:4px;padding:4px 8px;display:inline-block;white-space:nowrap;font-size:16px}
 
 /* 面積バー */
 .area-bar-wrap{margin-bottom:20px}
@@ -203,16 +214,16 @@ tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var
 .note strong{color:var(--color-primary)}
 
 /* 財源ボックス */
-.finance-section{background:var(--color-bg-subtle);border:1px solid var(--color-border);border-radius:var(--radius);padding:16px 20px;margin-top:16px}
-.finance-section h4{font-size:16px;font-weight:700;color:var(--color-primary);margin-bottom:10px}
+.finance-section{background:#F5F4F2;border:1px solid var(--color-border);border-radius:var(--radius);padding:16px 20px;margin-top:16px}
+.finance-section h4{font-size:16px;font-weight:700;color:var(--color-fg);margin-bottom:10px}
 .finance-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px}
 .finance-row:last-child{border-bottom:none}
-.finance-row.total{background:var(--color-primary-soft);border-radius:4px;padding:8px 10px;margin-top:4px}
-.finance-row.total .f-label{font-weight:700;color:var(--color-primary)}.finance-row.total .f-value{font-weight:700;color:var(--color-primary);font-size:18px}
+.finance-row.total{background:#E0DEDB;border-radius:4px;padding:8px 10px;margin-top:4px;border-top:2px solid #B0AAA4}
+.finance-row.total .f-label{font-weight:700;color:var(--color-fg)}.finance-row.total .f-value{font-weight:700;color:var(--color-fg);font-size:18px}
 .f-label{color:var(--color-fg-muted)}.f-value{font-weight:600}
 
 /* 答申書バッジ付き要件 */
-.toshi-req{display:inline-block;background:var(--color-primary-soft);color:var(--color-primary);font-size:16px;font-weight:700;padding:1px 7px;border-radius:10px;margin-right:4px}
+.toshi-req{display:inline-block;background:#E4E2DE;color:var(--color-fg);font-size:16px;font-weight:700;padding:1px 7px;border-radius:10px;margin-right:4px}
 
 /* ワーニング列 */
 .td-warn{color:var(--color-danger);font-weight:700}
@@ -229,55 +240,55 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 .gantt-table{width:100%;border-collapse:collapse;font-size:16px;min-width:900px;table-layout:fixed}
 .gantt-table th,.gantt-table td{border:1px solid var(--color-border-subtle);padding:9px 5px;text-align:center;vertical-align:middle;line-height:1.5;overflow:hidden}
 .g-task-hd{background:var(--color-primary);color:#fff;font-weight:700;font-size:16px;padding:10px 12px;width:200px;min-width:200px;text-align:left}
-.g-y26{background:var(--color-primary-soft);color:var(--color-primary-dark);font-weight:700;font-size:16px}
-.g-y27{background:var(--plan-a-soft);color:var(--plan-a-header);font-weight:700;font-size:16px}
-.g-y28{background:var(--color-caution-soft);color:var(--color-caution);font-weight:700;font-size:16px}
-.g-y29{background:var(--plan-c-soft);color:var(--plan-c-header);font-weight:700;font-size:16px}
-.g-y30{background:var(--color-primary-soft);color:var(--color-primary-dark);font-weight:700;font-size:16px}
-.g-qhd{background:var(--color-bg-subtle);color:var(--color-fg-muted);font-weight:700;font-size:16px;padding:6px 2px}
+.g-y26{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
+.g-y27{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
+.g-y28{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
+.g-y29{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
+.g-y30{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
+.g-qhd{background:#EDECEA;color:#617279;font-weight:700;font-size:16px;padding:6px 2px}
 .g-grp{font-weight:700;font-size:16px;text-align:left;padding:9px 14px;letter-spacing:.04em}
-.g-grp-a{background:var(--plan-a-header);color:#fff}
-.g-grp-b{background:var(--plan-b-header);color:#fff}
-.g-grp-c{background:var(--plan-c-header);color:#fff}
-.g-grp-com{background:var(--color-primary-dark);color:#fff}
-.g-lbl{text-align:left;font-size:16px;font-weight:600;background:var(--color-bg-subtle);padding:6px 10px;white-space:nowrap}
-.g-lbl-a{color:var(--plan-a-header);border-left:5px solid var(--plan-a-header)}
-.g-lbl-b{color:var(--plan-b-header);border-left:5px solid var(--plan-b-header)}
-.g-lbl-c{color:var(--plan-c-header);border-left:5px solid var(--plan-c-header)}
-.g-lbl-com{color:var(--color-primary-dark);border-left:5px solid var(--color-primary-dark)}
-.g-empty{background:var(--color-bg-subtle)}
+.g-grp-a{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-a-header)}
+.g-grp-b{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-b-header)}
+.g-grp-c{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-c-header)}
+.g-grp-com{background:#3A4A4F;color:#fff}
+.g-lbl{text-align:left;font-size:16px;font-weight:600;background:#F5F4F2;padding:6px 10px;white-space:nowrap;color:var(--color-fg)}
+.g-lbl-a{border-left:4px solid var(--plan-a-header)}
+.g-lbl-b{border-left:4px solid var(--plan-b-header)}
+.g-lbl-c{border-left:4px solid var(--plan-c-header)}
+.g-lbl-com{border-left:4px solid #546E7A}
+.g-empty{background:#F5F4F2}
 .g-bar{color:#fff;font-weight:700;font-size:16px}
-.g-com-c1{background:var(--plan-c-soft);color:var(--plan-c-header);font-size:16px}
-.g-com-c2{background:var(--color-primary);color:#fff}
-.g-com-c3{background:var(--color-primary-dark);color:#fff}
-.g-a-c1{background:var(--plan-a-soft);color:var(--plan-a-header);font-size:16px}
-.g-a-c2{background:#2A3840;color:#fff}
-.g-a-c3{background:var(--plan-a-header);color:#fff}
-.g-b-c1{background:var(--plan-b-soft);color:var(--plan-b-header);font-size:16px}
-.g-b-prop{background:#B4D4CF;color:var(--plan-b-header);font-weight:700;font-size:16px}
-.g-b-c2{background:#6FA79B;color:#fff}
-.g-b-c3{background:var(--plan-b-header);color:#fff}
-.g-c-c1{background:var(--plan-c-soft);color:var(--plan-c-header);font-size:16px}
-.g-c-c2{background:#7D9E9A;color:#fff}
-.g-c-c3{background:#6FA79B;color:#fff}
-.g-ms-a{background:var(--plan-a-soft);color:var(--plan-a-header);font-weight:800;font-size:16px;line-height:1.4}
-.g-ms-b{background:var(--plan-b-soft);color:var(--plan-b-header);font-weight:800;font-size:16px;line-height:1.4}
-.g-ms-c{background:var(--plan-c-soft);color:var(--plan-c-header);font-weight:800;font-size:16px;line-height:1.4}
+.g-com-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-com-c2{background:#546E7A;color:#fff}
+.g-com-c3{background:#37474F;color:#fff}
+.g-a-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-a-c2{background:#4A6068;color:#fff}
+.g-a-c3{background:#3A4A4F;color:#fff}
+.g-b-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-b-prop{background:#D8D4CF;color:var(--color-fg);font-weight:700;font-size:16px}
+.g-b-c2{background:#5A7A75;color:#fff}
+.g-b-c3{background:#4A6A66;color:#fff}
+.g-c-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-c-c2{background:#607D7A;color:#fff}
+.g-c-c3{background:#4A6562;color:#fff}
+.g-ms-a{background:#D8D4CF;color:#3A4A4F;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #3A4A4F}
+.g-ms-b{background:#D8D4CF;color:#4A6A66;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #4A6A66}
+.g-ms-c{background:#D8D4CF;color:#607D7A;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #607D7A}
 .gantt-legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 4px;font-size:16px;align-items:center;padding:8px 12px;background:var(--color-bg-subtle);border-radius:6px}
 .legend-item{display:flex;align-items:center;gap:5px}
 .legend-swatch{display:inline-block;width:20px;height:16px;border-radius:2px;flex-shrink:0}
 .gantt-note{font-size:16px;color:var(--color-fg-muted);margin-left:auto}
 .g-spacer td{height:36px;background:var(--color-bg);border-left:none;border-right:none;border-top:2px solid var(--color-border);border-bottom:none;padding:0}
-.g-grp-soko{background:#546E7A;color:#fff}
-.g-lbl-soko{color:#546E7A;border-left:5px solid #546E7A}
-.g-soko-c1{background:#ECEFF1;color:#37474F;font-size:16px}
-.g-soko-c2{background:#90A4AE;color:#fff}
-.g-soko-c3{background:#546E7A;color:#fff}
+.g-grp-soko{background:#3A4A4F;color:#fff;border-left:5px solid #90A4AE}
+.g-lbl-soko{border-left:4px solid #546E7A}
+.g-soko-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-soko-c2{background:#607880;color:#fff}
+.g-soko-c3{background:#3A4A4F;color:#fff}
 /* ===== 答申書バッジ ===== */
-.toshi-badge{display:inline-flex;align-items:center;gap:5px;background:var(--color-primary-soft);color:var(--color-primary);font-size:16px;font-weight:700;padding:3px 10px;border-radius:12px;border:1px solid var(--color-primary);vertical-align:middle;white-space:nowrap;text-decoration:none}
-.toshi-badge:hover{background:var(--color-primary);color:#fff}
-.toshi-note{background:var(--color-primary-soft);border-left:4px solid var(--color-primary);border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:12px 0;font-size:16px;color:var(--color-primary);line-height:1.65}
-.toshi-note strong{color:var(--color-primary-dark)}
+.toshi-badge{display:inline-flex;align-items:center;gap:5px;background:#EDECEA;color:var(--color-fg);font-size:16px;font-weight:700;padding:3px 10px;border-radius:12px;border:1px solid #B0AAA4;vertical-align:middle;white-space:nowrap;text-decoration:none}
+.toshi-badge:hover{background:#D5D0CB;color:var(--color-fg)}
+.toshi-note{background:#F0EFED;border-left:4px solid #8A9BA0;border-radius:0 var(--radius) var(--radius) 0;padding:10px 14px;margin:12px 0;font-size:16px;color:var(--color-fg);line-height:1.65}
+.toshi-note strong{color:var(--color-fg)}
 /* ===== プランタブ ===== */
 .tab-nav{display:flex;gap:0;margin-bottom:0;border-bottom:2px solid var(--color-border)}
 .tab-btn{padding:11px 24px;font-size:16px;font-weight:700;background:none;border:none;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;color:var(--color-fg-muted);transition:all .15s;font-family:inherit}
@@ -298,6 +309,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   <div class="nav-group">Layer 1 — 意思決定</div>
   <ul>
     <li><a href="#summary">エグゼクティブサマリー</a></li>
+    <li><a href="#scale">規模・面積・LCC・事業費</a></li>
+    <li><a href="#schedule">スケジュール</a></li>
   </ul>
 
   <div class="nav-group">Layer 2 — 比較エビデンス</div>
@@ -305,10 +318,6 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     <li><a href="#checklist">付帯意見チェック</a></li>
     <li><a href="#matrix">評価マトリックス</a></li>
     <li><a href="#risk">リスク評価</a></li>
-    <li><a href="#schedule">スケジュール</a></li>
-    <li><a href="#scale">規模・面積</a></li>
-    <li><a href="#zaigen">事業費・財源</a></li>
-    <li><a href="#lcc">LCC比較</a></li>
   </ul>
 
   <div class="nav-group">Layer 3 — プラン詳細</div>
@@ -339,7 +348,6 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     <span>作成：鹿追町教育委員会 社会教育課</span>
     <span>対象：図書館建設プラン選定</span>
   </div>
-  <div><span class="update-badge">🔄 v3.3 — LCC感度分析表削除・フォントサイズ統一（16px以上）・蔵書維持表現修正（2026年6月4日）</span></div>
 </header>
 
 <main>
@@ -375,10 +383,6 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <div style="font-size:clamp(14px,1.1vw + 4px,18px);font-weight:700;color:var(--color-danger);line-height:1.7">空調なし<br>バリアフリー困難<br>トイレ不便・狭隘</div>
       </div>
     </div>
-    <div style="font-size:clamp(14px,0.9vw + 5px,16px);color:var(--color-fg-muted);line-height:1.75">
-      ▶ 各プランの検討は、この現図書館を<strong>どう更新・移転・改修するか</strong>という問いへの回答です。
-      蔵書86,000冊の維持・継続サービスの確保・答申書コンセプトの実現を軸に3案を比較します。
-    </div>
   </div>
 
   <div class="summary-grid">
@@ -390,28 +394,28 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <div class="concept">本のある暮らしが、ここから始まる。</div>
         <div style="font-size:clamp(12px,0.8vw + 4px,15px);font-style:italic;color:var(--color-fg-muted);margin:0 0 0">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">計画蔵書数</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--plan-a-header)">85,000冊</span>
+      <div class="sc-stat-wrap">
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">計画蔵書数</span>
+          <span class="sc-stat-value" style="color:var(--plan-a-header)">85,000冊</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">付帯意見充足</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--plan-a-header)">12/14 ◎最高</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">付帯意見充足</span>
+          <span class="sc-stat-value" style="color:var(--plan-a-header)">12/14 ◎最高</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">供用開始</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap">2030年度</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">供用開始</span>
+          <span class="sc-stat-value">2030年度</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">一般財源率</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-positive)">21.6% ◎最小</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">一般財源率</span>
+          <span class="sc-stat-value" style="color:var(--color-positive)">21.6% ◎最小</span>
         </div>
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
+      <div class="sc-note-row">
         ✅ <strong>強み：</strong>補助金＋過疎債の二重活用で実質地方負担が3プラン中最小
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
+      <div class="sc-note-row">
         ⚠️ <strong>リスク：</strong>供用開始が最遅（2030年）・合意形成の調整が最も複雑
       </div>
     </div>
@@ -423,28 +427,28 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <div class="concept">日常の動線に、本がある。</div>
         <div style="font-size:clamp(12px,0.8vw + 4px,15px);font-style:italic;color:var(--color-fg-muted);margin:0 0 0">商業施設と一体で、街なかに根づく図書館</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">計画蔵書数</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-caution)">50,000冊</span>
+      <div class="sc-stat-wrap">
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">計画蔵書数</span>
+          <span class="sc-stat-value" style="color:var(--color-caution)">50,000冊</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">付帯意見充足</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-caution)">4/14</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">付帯意見充足</span>
+          <span class="sc-stat-value" style="color:var(--color-caution)">4/14</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">供用開始</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--plan-b-header)">2028年Q4 最速</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">供用開始</span>
+          <span class="sc-stat-value" style="color:var(--plan-b-header)">2028年Q4 最速</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">一般財源率</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-danger)">100% 最大</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">一般財源率</span>
+          <span class="sc-stat-value" style="color:var(--color-danger)">100% 最大</span>
         </div>
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
+      <div class="sc-note-row">
         ✅ <strong>強み：</strong>答申書第1候補地・3プラン中最速開館（2028年Q4）
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
+      <div class="sc-note-row">
         ⚠️ <strong>リスク：</strong>テナント料1,600万円/年が毎年継続・一般財源負担100%
       </div>
     </div>
@@ -456,28 +460,28 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <div class="concept">工夫で、図書館を育てる。</div>
         <div style="font-size:clamp(12px,0.8vw + 4px,15px);font-style:italic;color:var(--color-fg-muted);margin:0 0 0">制約の中から生まれる、鹿追らしい図書館再生</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">計画蔵書数</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-caution)">約44,000冊</span>
+      <div class="sc-stat-wrap">
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">計画蔵書数</span>
+          <span class="sc-stat-value" style="color:var(--color-caution)">約44,000冊</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">付帯意見充足</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-caution)">4/14</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">付帯意見充足</span>
+          <span class="sc-stat-value" style="color:var(--color-caution)">4/14</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">供用開始</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap">2029年度</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">供用開始</span>
+          <span class="sc-stat-value">2029年度</span>
         </div>
-        <div style="background:rgba(255,255,255,.6);border-radius:8px;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <span style="font-size:clamp(11px,0.7vw+3px,13px);color:var(--color-fg-muted);white-space:nowrap;flex-shrink:0">一般財源率</span>
-          <span style="font-size:clamp(15px,1.1vw+5px,20px);font-weight:700;white-space:nowrap;color:var(--color-caution)">37.0%</span>
+        <div class="sc-stat-row">
+          <span class="sc-stat-label">一般財源率</span>
+          <span class="sc-stat-value" style="color:var(--color-caution)">37.0%</span>
         </div>
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px;margin-bottom:8px">
+      <div class="sc-note-row">
         ✅ <strong>強み：</strong>第1候補地・リスク最小・一般財源実質負担が3プラン中最低
       </div>
-      <div style="font-size:clamp(12px,0.8vw+5px,15px);background:rgba(255,255,255,.5);border-radius:8px;padding:12px 14px">
+      <div class="sc-note-row">
         ⚠️ <strong>リスク：</strong>現有86,000冊から約42,000冊の除籍整理が必要・昇降設備費は別途
       </div>
     </div>
@@ -553,293 +557,10 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 </div>
 
 
-<!-- 付帯意見チェックリスト -->
-<div class="section" id="checklist">
-  <h2 class="section-title">
-    <span class="num">NEW ｜ 答申書付帯意見との整合性</span>付帯意見整合性チェックリスト
-    <span class="new-badge">NEW</span>
-  </h2>
 
-  <div class="toshi-note">
-    <strong>答申書より</strong>　付帯意見は2023年3月答申書 §5「施設・設備の主要付帯意見」に基づく。
-    <a href="#toshinsho" class="toshi-badge">📋 答申書 §5 を参照</a>
-  </div>
-
-  <div class="check-legend">
-    <span class="ck-s">◎ 実現しやすい</span>
-    <span class="ck-o">○ 検討次第</span>
-    <span class="ck-t">△ 困難</span>
-    <span class="ck-x">× 実現困難</span>
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th style="min-width:200px">付帯意見の要件</th>
-          <th class="th-a" style="text-align:center;width:120px">Plan A</th>
-          <th class="th-b" style="text-align:center;width:120px">Plan B</th>
-          <th class="th-c" style="text-align:center;width:120px">Plan C</th>
-          <th style="min-width:180px">判断根拠</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>ユニバーサルデザイン（全体）</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は既存躯体の制約あり</td></tr>
-        <tr><td>エントランスホール（多目的）</td><td class="check-s">◎</td><td class="check-t">△</td><td class="check-t">△</td><td style="font-size:16px">Plan C は1,000㎡（1F+2F）確保でも既存躯体の動線制約あり</td></tr>
-        <tr><td>カフェ・軽食スペース</td><td class="check-s">◎</td><td class="check-t">△</td><td class="check-x">×</td><td style="font-size:16px">Plan B はテナント内規制の可能性</td></tr>
-        <tr><td>幼児・児童コーナー＋親子トイレ</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は空間的制約あり</td></tr>
-        <tr><td>YAコーナー（青少年サードプレイス）</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は専用スペース確保困難</td></tr>
-        <tr><td>視聴覚室・多目的室</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は1,000㎡（1F+2F）でも専用室の確保に制約あり</td></tr>
-        <tr><td>Wi-Fi・パソコンブース</td><td class="check-s">◎</td><td class="check-s">◎</td><td class="check-o">○</td><td style="font-size:16px">全プランで導入可能（Plan Cは制限あり）</td></tr>
-        <tr class="check-row-critical"><td>バンビ号（移動図書館）車庫</td><td class="check-s">◎</td><td class="check-x">×</td><td class="check-x">×</td><td style="font-size:16px">Plan B は民間施設内、Plan C はリノベ後敷地内での確保が困難</td></tr>
-        <tr class="check-row-critical"><td><strong>バイオガス空調</strong>（鹿追の特色）</td><td class="check-t">△</td><td class="check-x">×</td><td class="check-t">△</td><td style="font-size:16px">答申書が特に強調。Plan B はNG。Plan A・C は技術的検討中</td></tr>
-        <tr><td><strong>直営管理</strong>（答申書推奨）</td><td class="check-s">◎</td><td class="check-s">◎（建物は民間、運営は直営）</td><td class="check-s">◎</td><td style="font-size:16px">全プランとも直営。指定管理・PPPは採らない</td></tr>
-        <tr><td>格調高い施設・デザイン性</td><td class="check-s">◎（受賞建築）</td><td class="check-t">△</td><td class="check-t">△</td><td style="font-size:16px">Plan A は受賞建築を活用</td></tr>
-        <tr><td>自動貸出機・除菌機</td><td class="check-s">◎</td><td class="check-s">◎</td><td class="check-o">○</td><td style="font-size:16px">Plan C は設置スペース要確認</td></tr>
-        <tr><td><strong>現有86,000冊の維持</strong></td><td class="check-s">◎（85,000冊でほぼ維持）</td><td class="check-t">△（50,000冊・△36,000冊）</td><td class="check-t">△（約44,000冊・△42,000冊）</td><td style="font-size:16px">Plan A：85,000冊（開架51,000＋閉架34,000）でほぼ維持（△1,000冊）。Plan B：50,000冊（△36,000冊）—大幅削減。Plan C：約44,000冊（△約42,000冊）—大幅除籍整理が必要</td></tr>
-        <tr><td>休館期間の最小化（付帯意見）</td><td class="check-t">△（工事1年間）</td><td class="check-t">△</td><td class="check-t">△（工事期間中の部分休館が必要）</td><td style="font-size:16px">答申書特記事項：長期休館を避けること。全プラン共通課題</td></tr>
-      </tbody>
-      <tfoot>
-        <tr style="background:var(--color-primary-soft);font-weight:700">
-          <td>付帯意見充足数（◎の数）</td>
-          <td style="text-align:center;color:var(--plan-a-header);font-size:18px">12 / 14</td>
-          <td style="text-align:center;color:var(--color-caution);font-size:18px">4 / 14</td>
-          <td style="text-align:center;color:var(--color-caution);font-size:18px">4 / 14</td>
-          <td style="font-size:16px">Plan A 12/14 ＞ Plan B・C 4/14（Plan B は蔵書数大幅縮小により「現有86,000冊の維持」が×）</td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
-</div>
-
-<!-- 評価マトリックス -->
-<div class="section" id="matrix">
-  <h2 class="section-title">
-    <span class="num">SECTION 2 ｜ 重み付き意思決定マトリックス</span>多基準評価マトリックス
-    <span class="update-badge-sm">スコア修正済み</span>
-  </h2>
-
-  <div class="toshi-note">
-    <strong>答申書より</strong>　「建設委員会・付帯意見整合性」の評価基準は答申書の3コンセプト・14付帯意見との整合度。
-    <a href="#toshinsho" class="toshi-badge">📋 答申書コンセプトを参照</a>
-  </div>
-
-  <div class="info-box" style="margin-bottom:16px">
-    <strong>スコア修正根拠：</strong>
-    ④委員会整合性：Plan A→★3（候補地の一つ、付帯意見12/14充足）／Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）。
-    ⑤実現容易性：Plan B→★1（「非常に困難」評価と整合）。
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th style="min-width:180px">評価基準</th>
-          <th style="width:70px;text-align:center">重み</th>
-          <th class="th-a" style="width:70px;text-align:center">A<br>スコア</th>
-          <th class="th-a" style="width:80px;text-align:center">A<br>加重値</th>
-          <th class="th-b" style="width:70px;text-align:center">B<br>スコア</th>
-          <th class="th-b" style="width:80px;text-align:center">B<br>加重値</th>
-          <th class="th-c" style="width:70px;text-align:center">C<br>スコア</th>
-          <th class="th-c" style="width:80px;text-align:center">C<br>加重値</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>①文化的・シンボリック価値</td><td style="text-align:center;font-weight:700">20%</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">1.00</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.40</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.40</td></tr>
-        <tr><td>②初期投資コスト効率</td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.60</td></tr>
-        <tr><td>③利用者集客・使用促進</td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.45</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
-        <tr class="new-row"><td><strong>④建設委員会・付帯意見整合性 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid score-updated" style="text-align:center"><strong>★3↑</strong></td><td class="score-mid score-updated" style="text-align:center"><strong>0.45</strong></td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
-        <tr class="new-row"><td><strong>⑤実現容易性・リスク管理 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td></tr>
-        <tr><td>⑥事業期間（短縮評価）</td><td style="text-align:center;font-weight:700">10%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.20</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td></tr>
-        <tr><td>⑦地域住民・社会的期待への対応</td><td style="text-align:center;font-weight:700">10%</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.50</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.30</td><td class="score-low" style="text-align:center">★1</td><td class="score-low" style="text-align:center">0.10</td></tr>
-        <tr>
-          <td><strong>総合スコア（満点5.00）</strong></td>
-          <td style="text-align:center;font-weight:700">100%</td>
-          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-a-header)">3.20</td>
-          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-b-header)">2.90</td>
-          <td colspan="2" class="score-total" style="text-align:center">2.85</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="note" style="margin-top:16px">
-    <strong>修正根拠：</strong>
-    ④委員会整合性：Plan A→★3（候補地の一つ＋付帯意見12/14充足）、Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）｜
-    ⑤実現容易性：Plan B→★1に修正（「非常に困難」バッジとの整合）｜
-    結果：Plan A（3.20）＞ Plan B（2.90）＞ Plan C（2.85）。付帯意見充足度・文化的価値・住民期待では<strong>Plan Aが突出</strong>。コスト・集客・スケジュールでは<strong>Plan Bが優位</strong>。
-  </div>
-
-  <div style="margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:16px;color:var(--color-fg-muted)">
-    スコアは答申書（2023年3月）の3コンセプト・14付帯意見を反映
-    <a href="#toshinsho" class="toshi-badge">📋 答申書全文を参照</a>
-    <a href="#matrix" class="toshi-badge">📊 評価マトリックスを参照</a>
-  </div>
-</div>
-
-<!-- リスク評価 -->
-<div class="section" id="risk">
-  <h2 class="section-title">
-    <span class="num">SECTION 3 ｜ リスクヒートマップ分析</span>リスク評価マトリックス
-    <span class="update-badge-sm">答申書追記</span>
-  </h2>
-
-  <div class="toshi-note">
-    <strong>答申書付帯意見</strong>　「建設・移転の際には、長期間の休館を避けるか、継続的に利用が可能になるよう計画をお願いしたい。」
-    <a href="#toshinsho" class="toshi-badge">📋 答申書 特記事項を参照</a>
-  </div>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>リスク項目</th><th>対象</th><th style="text-align:center">確率</th><th style="text-align:center">影響</th><th style="text-align:center">評価</th><th>主な対策</th></tr>
-      </thead>
-      <tbody>
-        <!-- Plan A -->
-        <tr><td colspan="6" style="background:var(--plan-a-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan A　ピュアモルトクラブハウス＋蔵書棟</td></tr>
-        <tr><td>委員会・議会の反対・理解不足</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">高</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>丁寧な説明・合意形成プロセスの設計</td></tr>
-        <tr><td>設計事業者の選考難航・品質低下</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>プロポーザル方式による慎重な選考</td></tr>
-        <tr><td>青少年施設転換の調整長期化</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>代替施設の事前確保・段階的移行計画</td></tr>
-        <tr><td>事業費の予算超過</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>CM方式の採用・予備費設計段階での確保</td></tr>
-        <tr><td>建設中の長期休館（利用者離れ）</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-yellow">🟡 管理可能</span></td><td>答申付帯意見通り臨時開設の検討</td></tr>
-        <!-- Plan B -->
-        <tr><td colspan="6" style="background:var(--plan-b-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan B　現図書館跡地テナント入居（直営）</td></tr>
-        <tr><td><strong>テナント契約条件（賃料・解約・更新）の不確実性</strong></td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>長期賃貸借契約の締結と条件の事前精査</td></tr>
-        <tr><td>文化施設としての評価低下・PR失敗</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">高</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>デザインガイドライン策定・内装質の確保</td></tr>
-        <tr><td>民間事業者との調整増加による遅延</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">高</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>明確な役割分担契約・定期調整会議</td></tr>
-        <tr><td>民間事業者との交渉決裂</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">低</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-yellow">🟡 管理可能</span></td><td>代替候補地・プランの事前設計</td></tr>
-        <!-- Plan C -->
-        <tr><td colspan="6" style="background:var(--plan-c-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan C　現図書館リノベーション</td></tr>
-        <tr><td>住民期待と整備内容の大幅な乖離</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">高</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>早期の住民説明・期待値管理の徹底</td></tr>
-        <tr><td>躯体老朽化による追加工事費発生</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>詳細な建物診断・予備費の確保</td></tr>
-        <tr><td><strong>2階改修に伴う構造補強・昇降設備工事費増</strong></td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>構造診断の早期実施・概算費用の精査</td></tr>
-        <tr><td>将来的な収容能力不足</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>拡張余地の確保・デジタル化推進</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="note" style="margin-top:12px">v2.1更新：「PPP管理と直営推奨の整合問題（B）」「蔵書削減反発（A）」を削除。「2階改修に伴う構造補強・昇降設備工事費増（C）」「テナント契約条件の不確実性（B）」を追加。</div>
-</div>
-
-<!-- スケジュール（ガントチャート） -->
-<div class="section" id="schedule">
-  <h2 class="section-title"><span class="num">SECTION 4</span>工事スケジュール ガントチャート</h2>
-
-  <div class="gantt-wrap">
-    <table class="gantt-table">
-      <thead>
-        <tr>
-          <th class="g-task-hd" rowspan="2">タスク / フェーズ</th>
-          <th class="g-y26" colspan="3">2026年度</th>
-          <th class="g-y27" colspan="4">2027年度</th>
-          <th class="g-y28" colspan="4">2028年度</th>
-          <th class="g-y29" colspan="4">2029年度</th>
-          <th class="g-y30">2030年度</th>
-        </tr>
-        <tr>
-          <th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
-          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
-          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
-          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
-          <th class="g-qhd">Q1</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- 書庫整備（旧幼稚園） -->
-        <tr><td class="g-grp g-grp-soko" colspan="17">■ 書庫整備（旧幼稚園）　→ この後、第2庁舎解体へと進む</td></tr>
-        <tr>
-          <td class="g-lbl g-lbl-soko">構想・改修・書類移動</td>
-          <td class="g-soko-c1">構想</td>
-          <td class="g-soko-c2 g-bar">改修工事</td>
-          <td class="g-soko-c3 g-bar">書類移動</td>
-          <td class="g-empty" colspan="13"></td>
-        </tr>
-        <!-- spacer -->
-        <tr class="g-spacer"><td colspan="17"></td></tr>
-        <!-- 解体撤去（PlanA・B） -->
-        <tr><td class="g-grp g-grp-com" colspan="17">■ 解体撤去工事（Plan A・Plan B）</td></tr>
-        <tr>
-          <td class="g-lbl g-lbl-com">構想・設計・工事</td>
-          <td class="g-com-c1">構想</td>
-          <td class="g-com-c2 g-bar" colspan="3">設計（〜2027Q1）</td>
-          <td class="g-com-c3 g-bar" colspan="3">工事（2027年度Q2〜Q4）</td>
-          <td class="g-empty" colspan="9"></td>
-        </tr>
-        <!-- spacer -->
-        <tr class="g-spacer"><td colspan="17"></td></tr>
-        <!-- Plan A -->
-        <tr><td class="g-grp g-grp-a" colspan="17">■ Plan A　ピュアモルトクラブハウス＋蔵書棟　（供用：2030年度）</td></tr>
-        <tr>
-          <td class="g-lbl g-lbl-a">構想・設計・工事</td>
-          <td class="g-a-c1" colspan="7">構想（〜2027年度）</td>
-          <td class="g-a-c2 g-bar" colspan="4">設計（2028年度）</td>
-          <td class="g-a-c3 g-bar" colspan="4">工事（2029年度）</td>
-          <td class="g-ms-a">★<br><small>供用</small></td>
-        </tr>
-        <!-- spacer -->
-        <tr class="g-spacer"><td colspan="17"></td></tr>
-        <!-- Plan B -->
-        <tr><td class="g-grp g-grp-b" colspan="17">■ Plan B　現図書館跡地テナント入居（直営）　（供用：2028年度Q4）</td></tr>
-        <tr>
-          <td class="g-lbl g-lbl-b">構想・設計・工事</td>
-          <td class="g-b-c1">構想</td>
-          <td class="g-b-prop g-bar" colspan="2">プロポーザル・事業者選定</td>
-          <td class="g-b-c2 g-bar" colspan="4">設計（〜2027年度）</td>
-          <td class="g-b-c3 g-bar" colspan="3">工事（2028年度Q1〜Q3）</td>
-          <td class="g-ms-b">★<br><small>供用</small></td>
-          <td class="g-empty" colspan="5"></td>
-        </tr>
-        <!-- spacer -->
-        <tr class="g-spacer"><td colspan="17"></td></tr>
-        <!-- Plan C -->
-        <tr><td class="g-grp g-grp-c" colspan="17">■ Plan C　現図書館 リノベーション　（供用：2029年度）</td></tr>
-        <tr>
-          <td class="g-lbl g-lbl-c">構想・設計・工事</td>
-          <td class="g-c-c1" colspan="3">構想</td>
-          <td class="g-empty">　</td>
-          <td class="g-c-c2 g-bar" colspan="2">設計（2027年度Q2〜Q3）</td>
-          <td class="g-empty">　</td>
-          <td class="g-c-c3 g-bar" colspan="4">工事（2028年度）</td>
-          <td class="g-ms-c">★<br><small>供用</small></td>
-          <td class="g-empty" colspan="4"></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="gantt-legend">
-    <span class="legend-item"><span class="legend-swatch" style="background:var(--plan-c-soft);border:1px solid var(--plan-c-header)"></span>構想</span>
-    <span class="legend-item"><span class="legend-swatch" style="background:#2A3840"></span>設計</span>
-    <span class="legend-item"><span class="legend-swatch" style="background:var(--color-primary-dark)"></span>工事</span>
-    <span class="legend-item"><strong>★</strong>&nbsp;供用開始マイルストーン</span>
-    <span class="gantt-note">Q1=4〜6月 / Q2=7〜9月 / Q3=10〜12月 / Q4=1〜3月（日本の年度）</span>
-  </div>
-
-  <div class="table-wrap" style="margin-top:20px">
-    <table>
-      <thead>
-        <tr>
-          <th>フェーズ</th>
-          <th class="th-a">Plan A ピュアモルト</th>
-          <th class="th-b">Plan B 現図書館跡地テナント</th>
-          <th class="th-c">Plan C リノベ</th>
-          <th style="background:var(--color-primary-dark)">解体撤去<br><small>Plan A・B</small></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td style="font-weight:700">構想</td><td><span class="schedule-a">2026年度 Q2〜2027年度 Q4</span></td><td><span class="schedule-b">2026年度 Q2</span></td><td><span class="schedule-c">2026年度 Q2〜Q4</span></td><td><span class="schedule-com">2026年度 Q2</span></td></tr>
-        <tr><td style="font-weight:700">設計</td><td><span class="schedule-a">2028年度 Q1〜Q4</span></td><td><span class="schedule-b">2026年度 Q3〜2027年度 Q4</span></td><td><span class="schedule-c">2027年度 Q2〜Q3</span></td><td><span class="schedule-com">2026年度 Q3〜2027年度 Q1</span></td></tr>
-        <tr><td style="font-weight:700">工事</td><td><span class="schedule-a">2029年度（1年間）</span></td><td><span class="schedule-b">2028年度 Q1〜Q3</span></td><td><span class="schedule-c">2028年度</span></td><td><span class="schedule-com">2027年度 Q2〜Q4</span></td></tr>
-        <tr><td style="font-weight:700">供用開始</td><td style="text-align:center"><strong style="color:var(--plan-a-header);font-size:17px">2030年度</strong></td><td style="text-align:center"><strong style="color:var(--plan-b-header);font-size:17px">2028年度Q4</strong></td><td style="text-align:center"><strong style="color:var(--plan-c-header);font-size:17px">2029年度</strong></td><td style="text-align:center">—</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="warning-box" style="margin-top:12px">⚠ Plan Aは2029年度の<strong>1年間工事</strong>。供用開始は2030年度でB・Cより遅い。長期休館を避けるため<strong>臨時図書館の設置計画が必須</strong>。Plan Bは2028年度Q4に最速供用開始（B・Cの中で最短）。</div>
-</div>
-
-<!-- 規模・面積 -->
 <div class="section" id="scale">
   <h2 class="section-title">
-    <span class="num">SECTION 5</span>規模・面積比較
+    <span class="num">SECTION 2</span>規模・面積比較
     <span class="update-badge-sm">現況データ追加</span>
   </h2>
 
@@ -882,237 +603,167 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     Plan A：85,000冊（開架51,000冊＋閉架34,000冊）で現有をほぼ維持（△1,000冊）。Plan B：50,000冊（開架30,000冊＋閉架20,000冊）で<strong style="color:var(--color-caution)">△36,000冊の大幅削減</strong>が必要。Plan C：約44,000冊（開架約26,400冊＋閉架約17,600冊）で<strong style="color:var(--color-caution)">△約42,000冊の除籍整理</strong>が必要。
   </div>
   <div class="note">面積指標：蔵書50冊/㎡（85,000冊→約1,700㎡）｜開架170冊/㎡｜閉架230冊/㎡｜閲覧席2〜2.5㎡/席｜開架：閉架比率＝6：4</div>
-</div>
 
-<!-- Plan A詳細 -->
-<!-- プラン詳細（タブUI） -->
-<div class="section" id="plans">
+  <hr style="border:none;border-top:2px solid var(--color-border);margin:40px 0">
+
   <h2 class="section-title">
-    <span class="num">LAYER 3 — プラン詳細</span>各プランの詳細
+    <span class="num">コスト分析</span>ライフサイクルコスト（LCC）比較
+    <span class="new-badge">NEW</span>
   </h2>
 
-  <!-- タブナビ -->
-  <div class="tab-nav">
-    <button class="tab-btn" id="btn-a" onclick="switchTab('a')">
-      Plan A　ピュアモルト＋蔵書棟
-    </button>
-    <button class="tab-btn" id="btn-b" onclick="switchTab('b')">
-      Plan B　現図書館跡地テナント
-    </button>
-    <button class="tab-btn" id="btn-c" onclick="switchTab('c')">
-      Plan C　現図書館リノベ
-    </button>
+  <div class="toshi-note">
+    <strong>答申書より</strong>　候補地の優先順位：第1位＝現図書館周辺（Plan B・C相当）、第3位＝ピュアモルト近隣（Plan A相当）。
+    建設場所の最終選定は「政治的判断」と明記。
+    <a href="#toshinsho" class="toshi-badge">📋 答申書 候補地評価を参照</a>
   </div>
 
-  <!-- Plan A ペイン -->
-  <div class="tab-pane" id="pane-a">
-
-  <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;border-left:4px solid var(--plan-a-header)">
-    <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第3位 ｜ 付帯意見充足：12/14 ◎最高</div>
-    <div style="font-size:18px;font-weight:700;color:var(--color-fg);margin-bottom:2px">本のある暮らしが、ここから始まる。</div>
-    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
-    <div style="font-size:16px;color:var(--color-fg-muted)">受賞歴ある建築物（北海道赤レンガ賞・日本公共建築賞）の歴史・文化性と純粋な読書環境の極みを融合。答申書が求める「格調の高い、町民の誇りとなる」施設像に最も合致するプラン。バイオガス空調・直営管理・格調ある施設等の付帯意見を実現できる。蔵書棟のみで<strong>85,000冊</strong>（開架51,000冊＋閉架34,000冊）を収蔵し、現有蔵書をほぼ維持できる計画。</div>
+  <div class="warning-box">
+    <strong>Plan B の「財源構造の罠」</strong><br>
+    30年間の名目総コストは Plan B（約7.05億円）&lt; Plan A（8.4億円）と Plan B が安く見える。
+    <strong>しかし財源の質に根本的な差がある。</strong>
+    Plan A は補助金＋交付税措置により実質持出は<strong>約2.35億円（28%）</strong>。
+    一方 Plan B は補助金・交付税措置が一切なく整備費＋テナント料30年分（1,600万円/年）の全額が一般財源。
+    <strong>実質持出ベースの30年累計負担は Plan B 約7.05億円 対 Plan A 約2.35億円 ＝ 約3倍の差。</strong>
+    ※テナント料は企画課試算（450㎡×10,000円/3.3㎡/月×12ヶ月）による。
   </div>
 
-  <div class="success-box">答申書3コンセプトとの整合：①やさしい図書館 ◎（最高の読書環境）｜②学びが育つ ◎（格調ある書架・静謐空間）｜③交流が生まれる ◎（多目的ゾーニング可能）</div>
+  <!-- 3プラン比較カード（CSS Subgrid — 全行を親グリッドで揃える） -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0">
 
-  <div style="background:var(--color-caution-soft);border:1px solid var(--color-caution);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-caution);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">やや困難</div>
-    <div style="font-size:16px;color:var(--color-fg)">現施設の基本理念を最大限に尊重しながら空調等の整備を行う必要があり、蔵書棟以外の整備についても十分な検討時間と整備コストが求められる。設計・施工の各段階で高度な調整が必要となる。</div>
-  </div>
-
-  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
-  <ul style="list-style:none">
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 新蔵書棟の建設（水回り設備不要の合理的設計）</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 既存本棟への空調設備導入（<span class="toshi-req">答申推奨</span>バイオガス空調を検討）</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 蔵書規模に対応した新書架システムの整備</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 外壁・内装の塗装修繕（建物の美観・耐久性向上）</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 利用者サービス拠点（受付・貸出カウンター）の整備</li>
-  </ul>
-
-  <div class="pros-cons-grid" style="margin-top:20px">
-    <div class="pros-box">
-      <h4>長所</h4>
-      <ul>
-        <li>道内随一の読書環境—答申書コンセプト全項目◎</li>
-        <li>受賞建築物活用で地域の誇りを可視化</li>
-        <li>バイオガス空調・直営管理等、付帯意見12/14充足</li>
-        <li>格調高い施設—町民の誇りとなる実現可能性が高い</li>
-      </ul>
+    <!-- Plan A（subgrid: 7行） -->
+    <div style="display:grid;grid-row:span 7;grid-template-rows:subgrid;border-radius:var(--radius-lg);border:2px solid var(--plan-a-header);overflow:hidden">
+      <div style="background:var(--plan-a-header);color:#fff;padding:14px 18px">
+        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN A</div>
+        <div style="font-size:18px;font-weight:700">ピュアモルト＋蔵書棟</div>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">名目事業費</div>
+        <strong style="font-size:16px">約8億4,000万円</strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">財源軽減（補助金＋交付税）</div>
+        <strong style="font-size:16px;color:var(--color-positive)">約6億0,500万円</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-positive-soft);border-left:4px solid var(--color-positive)">
+        <div style="font-size:14px;font-weight:700;color:var(--color-positive);margin-bottom:3px">★ 実質持出（整備費）</div>
+        <strong style="font-size:20px;color:var(--color-positive)">約2億3,500万円<span style="font-size:16px">（28%）</span></strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">ランニングコスト</div>
+        <span style="font-size:16px">通常維持費のみ</span>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">30年累計実質持出</div>
+        <strong style="font-size:16px;color:var(--color-positive)">約2億3,500万円</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-positive-soft);font-size:15px;color:var(--color-positive)">
+        補助金＋過疎債ダブル活用で実質持出が3プラン中最小
+      </div>
     </div>
-    <div class="cons-box">
-      <h4>懸念点</h4>
-      <ul>
-        <li>委員会の第3候補地（第1候補でない）—合意形成が必要</li>
-        <li>青少年施設転換の調整が必要</li>
-        <li>設計事業者の選考に高度な慎重さが必要</li>
-        <li>供用開始2030年・建設期間の長期休館リスク</li>
-      </ul>
+
+    <!-- Plan B（subgrid: 7行） -->
+    <div style="display:grid;grid-row:span 7;grid-template-rows:subgrid;border-radius:var(--radius-lg);border:2px solid var(--plan-b-header);overflow:hidden">
+      <div style="background:var(--plan-b-header);color:#fff;padding:14px 18px">
+        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN B</div>
+        <div style="font-size:18px;font-weight:700">現図書館跡地テナント</div>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">名目事業費（整備費）</div>
+        <strong style="font-size:16px">約2億2,500万円</strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">財源軽減（補助金・交付税）</div>
+        <strong style="font-size:16px;color:var(--color-danger)">なし（0円）</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-danger-soft);border-left:4px solid var(--color-danger)">
+        <div style="font-size:14px;font-weight:700;color:var(--color-danger);margin-bottom:3px">★ 実質持出（整備費）</div>
+        <strong style="font-size:20px;color:var(--color-danger)">約2億2,500万円<span style="font-size:16px">（100%）</span></strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">ランニング（テナント料）</div>
+        <strong style="font-size:16px;color:var(--color-danger)">1,600万円/年</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-danger-soft);border-left:4px solid var(--color-danger)">
+        <div style="font-size:14px;font-weight:700;color:var(--color-danger);margin-bottom:3px">★ 実質持出（30年累計）</div>
+        <strong style="font-size:20px;color:var(--color-danger)">約7億500万円<span style="font-size:16px">（100%）</span></strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-danger-soft);font-size:15px;color:var(--color-danger)">
+        実質持出30年累計はPlan Aの約3倍・Plan Cの約5倍
+      </div>
     </div>
-  </div>
 
-  <div style="background:var(--color-caution-soft);border-left:4px solid var(--color-caution);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
-    <div style="font-size:16px;font-weight:700;color:var(--color-caution);margin-bottom:8px">⚠ 追加検討事項</div>
-    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">蔵書棟の新設に加え、受賞建築である本棟の塗装修繕をはじめとする整備も必須となる。特に空調設備については、北海道赤レンガ賞・日本公共建築賞を受賞した格調ある建物の外観と内観を損なわないよう、一般的な室内機・室外機の配置は避けたい。バイオガス活用を含め、建築の品格にふさわしい空調方式の選定には高度な技術的配慮と慎重な検討が不可欠である。</p>
-    <p style="font-size:16px;color:var(--color-fg);margin:0">これらの要件を踏まえると、蔵書棟の建設費のみならず本棟整備費を含めた総事業費は相当規模になることが想定される。設計段階において費用全体を丁寧に精査する必要がある。</p>
-  </div>
-
-  <div class="finance-section" style="margin-top:20px">
-    <h4>事業費・財源計画（概算）<small style="font-weight:400;color:var(--color-fg-muted)">　※詳細内訳は「<a href="#zaigen" style="color:var(--color-primary)">事業費・財源内訳</a>」セクション参照</small></h4>
-    <div class="finance-row total"><span class="f-label">想定事業費合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約8億4,000万円</span></div>
-    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">① 社会資本整備交付金（補助率40%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">約3億4,500万円</span></div>
-    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">② 過疎債（充当率100%）+ 公適債（充当率90%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">起債合計 約4億6,800万円<br><small>うち交付税措置 約3億0,300万円</small></span></div>
-    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>実質持出分</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億3,500万円（28%）</span></div>
-  </div>
-
-  </div><!-- /pane-a -->
-
-  <!-- Plan B ペイン -->
-  <div class="tab-pane" id="pane-b">
-
-  <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-b-header)">
-    <div style="font-size:16px;font-weight:700;color:var(--plan-b-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：<span style="color:var(--plan-b-header)">第1候補地（現図書館周辺）✅</span> ｜ 付帯意見充足：4/14</div>
-    <div style="font-size:18px;font-weight:700;margin-bottom:2px">日常の動線に、本がある。</div>
-    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">商業施設と一体で、街なかに根づく図書館</div>
-    <div style="font-size:16px;color:var(--color-fg-muted)">現図書館の場所（答申書第1候補地）に新たな商業施設を建設し、テナント面積<strong>450㎡</strong>に図書館を整備する。テナント内に開架30,000冊、別棟閉架書庫（80㎡）に20,000冊、合計<strong>50,000冊</strong>規模。建物は民間施設だが、図書館の運営は町が直接行う（<strong>指定管理・PPP方式は採らない</strong>）。集客力のある商業施設との複合利用で「ついでに立ち寄る」文化を醸成。現有86,000冊からは縮小となるが、閉架書庫を別棟で確保することで収蔵機能を補完する。</div>
-  </div>
-
-  <div class="info-box">
-    <strong>答申書との整合：</strong>
-    ①第1候補地（現図書館周辺）に対応 ✅ ②直営運営で答申推奨を実現 ✅ ③残存課題：バイオガス空調・バンビ号車庫の実現困難、テナント料が継続的ランニングコストとして発生
-  </div>
-
-  <div style="background:var(--color-danger-soft);border:1px solid var(--color-danger);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-danger);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">非常に困難</div>
-    <div style="font-size:16px;color:var(--color-fg)">3プランの中で最も実現が難しく、事業費に見合う図書館としての文化的価値のストーリー構築が求められる一方、時間的制約の中で民間事業者が主体となる複雑な事業調整が必要となる。</div>
-  </div>
-
-  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
-  <ul style="list-style:none">
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ テナントスペースへの書架・展示什器の設置</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 利用者用家具・設備什器の調達・設置</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 図書館管理・事務スペースの整備</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 情報システム・ICT設備の導入</li>
-  </ul>
-
-  <div class="pros-cons-grid" style="margin-top:20px">
-    <div class="pros-box">
-      <h4>長所</h4>
-      <ul>
-        <li>答申書第1候補地（現図書館周辺）への対応で立地の優位性</li>
-        <li>商業施設からの自然な来館誘導</li>
-        <li>民間建設でイニシャルコストを抑制</li>
-        <li>直営運営により答申書推奨の管理形態を実現 ✅</li>
-        <li>供用開始2028年度Q4（Plan A・Cより早い）</li>
-      </ul>
+    <!-- Plan C（subgrid: 7行） -->
+    <div style="display:grid;grid-row:span 7;grid-template-rows:subgrid;border-radius:var(--radius-lg);border:2px solid var(--plan-c-header);overflow:hidden">
+      <div style="background:var(--plan-c-header);color:#fff;padding:14px 18px">
+        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN C</div>
+        <div style="font-size:18px;font-weight:700">現図書館リノベ</div>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">名目事業費（リノベのみ）</div>
+        <strong style="font-size:16px">約3億7,500万円</strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">財源軽減（過疎債＋交付税）</div>
+        <strong style="font-size:16px;color:var(--color-positive)">約2億3,625万円</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-caution-soft);border-left:4px solid var(--color-caution)">
+        <div style="font-size:14px;font-weight:700;color:var(--color-caution);margin-bottom:3px">★ 実質持出（整備費）</div>
+        <strong style="font-size:20px;color:var(--color-caution)">約1億3,875万円<span style="font-size:16px">（37%）</span></strong>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">ランニングコスト</div>
+        <span style="font-size:16px">通常維持費のみ</span>
+      </div>
+      <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
+        <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">30年累計実質持出</div>
+        <strong style="font-size:16px;color:var(--color-caution)">約1億3,875万円</strong>
+      </div>
+      <div style="padding:12px 18px;background:var(--color-caution-soft);font-size:15px;color:var(--color-caution)">
+        実質持出額は3プラン中最少。昇降設備確定後に再評価が必要。
+      </div>
     </div>
-    <div class="cons-box">
-      <h4>懸念点</h4>
-      <ul>
-        <li>デザイン性・文化的価値の創出が困難（商業施設内という制約）</li>
-        <li>付帯意見（バイオガス空調・バンビ号車庫等）が実現困難</li>
-        <li>テナント料が継続的なランニングコストとして発生（1,600万円/年・30年で約4億8,000万円）</li>
-        <li>テナント契約条件（賃料改定・解約・更新）の長期的な不確実性</li>
-      </ul>
+
+  </div>
+
+
+  <!-- 3プラン LCC総額比較カード -->
+  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:28px 0 10px">LCC総額比較（実質持出＋予想修繕費・20年）</h3>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
+    <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-a-header)">
+      <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:8px">PLAN A（新築）</div>
+      <div style="font-size:24px;font-weight:700;color:var(--plan-a-header)">4.45億円</div>
+      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.35億 ＋ 修繕費2.10億</div>
+      <div style="margin-top:8px;font-size:16px;color:var(--color-positive);font-weight:700">3プラン中2位</div>
     </div>
-  </div>
-
-  <div style="background:var(--color-caution-soft);border-left:4px solid var(--color-caution);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
-    <div style="font-size:16px;font-weight:700;color:var(--color-caution);margin-bottom:8px">⚠ 追加検討事項（面積・蔵書数の試算）</div>
-    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">テナント450㎡（開架30,000冊）に別棟閉架書庫（80㎡・20,000冊）を加えて合計<strong>50,000冊</strong>規模を確保する。現有86,000冊から36,000冊の縮小となるが、閉架書庫の別棟整備により収蔵機能を補完する。答申書が求める蔵書規模との整合性確保が引き続き課題となる。</p>
-    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">蔵書数の大幅減少を補うために閲覧席・読書環境・空間デザインに格別の工夫が必要である。また、蔵書を補完するために別棟として閉架書庫を建築する選択肢もあるが、その場合は事業規模がさらに拡大する。</p>
-    <p style="font-size:16px;color:var(--color-fg);margin:0">商業施設のテナントとして図書館を位置づけるためには、テナント料（1,600万円/年・30年で約4億8,000万円）に見合う「図書館」としての機能的・文化的効果を明確なストーリーで示す必要がある。</p>
-  </div>
-
-  <div class="finance-section" style="margin-top:20px">
-    <h4>事業費・財源計画（概算）<small style="font-weight:400;color:var(--color-fg-muted)">　※詳細内訳は <a href="#zaigen" style="color:var(--color-primary)">事業費・財源内訳</a> を参照</small></h4>
-    <div class="finance-row total"><span class="f-label">イニシャルコスト合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約2億2,500万円</span></div>
-    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>テナント料（毎年発生）</strong></span><span class="f-value" style="color:var(--color-caution);font-weight:700">1,600万円/年（30年 約4億8,000万円）</span></div>
-    <div class="finance-row" style="background:var(--color-danger-soft)"><span class="f-label"><strong>一般財源（実質地方負担）</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億3,500万円（100%）</span></div>
-  </div>
-
-  </div><!-- /pane-b -->
-
-  <!-- Plan C ペイン -->
-  <div class="tab-pane" id="pane-c">
-
-  <div style="background:var(--plan-c-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-c-header)">
-    <div style="font-size:16px;font-weight:700;color:var(--plan-c-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第1位（制約大） ｜ 付帯意見充足：4/14</div>
-    <div style="font-size:18px;font-weight:700;margin-bottom:2px">工夫で、図書館を育てる。</div>
-    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">制約の中から生まれる、鹿追らしい図書館再生</div>
-    <div style="font-size:16px;color:var(--color-fg-muted)">候補地第1位・直営管理で答申書の基本方針に沿う。既存建物の<strong>1Fフルリノベ（開架311㎡）＋2F修繕（閉架）</strong>により約1,000㎡を整備。計画蔵書数は<strong>約44,000冊</strong>（開架約26,400冊＋閉架約17,600冊）で、現有86,000冊から約42,000冊の除籍整理が必要。1F＋2F合計でも多機能化（カフェ・視聴覚室・YAコーナー等）の全面実現は困難で、<strong>構造補強・昇降設備等の追加工事費</strong>が発生する。</div>
-  </div>
-
-  <div class="info-box">答申書候補地第1位に相当。蔵書数・直営管理は適合。ただし2F改修に伴う<strong>構造補強・昇降設備（エレベーター等）の追加工事費</strong>が発生し、多機能要件（14項目中4項目のみ充足）の実現は困難。</div>
-
-  <div style="background:var(--color-positive-soft);border:1px solid var(--color-positive);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
-    <div style="background:var(--color-positive);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">比較的容易</div>
-    <div style="font-size:16px;color:var(--color-fg)">1階部分のみの整備に限定することで、3プランの中で最も実現しやすい。ただし、整備範囲を絞るほど答申書が求める複合機能との整合性確保が難しくなるトレードオフがある。</div>
-  </div>
-
-  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
-  <ul style="list-style:none">
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 電気設備・機械設備の全面更新（省エネ・安全性向上）</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 利用者向け家具・備品・案内サインの刷新</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 内壁・天井の塗装修繕（施設の美観・清潔感の回復）</li>
-    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 書架・什器の更新整備</li>
-  </ul>
-
-  <div class="pros-cons-grid" style="margin-top:20px">
-    <div class="pros-box">
-      <h4>特徴（長所）</h4>
-      <ul>
-        <li>候補地第1位・直営管理・リスク最小</li>
-        <li>コスト最低・調整事項最小</li>
-        <li>既存の温かい雰囲気・地域密着性を継続</li>
-      </ul>
+    <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-b-header)">
+      <div style="font-size:16px;font-weight:700;color:var(--plan-b-header);margin-bottom:8px">PLAN B（テナント・20年）</div>
+      <div style="font-size:24px;font-weight:700;color:var(--color-danger)">5.45億円</div>
+      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.25億 ＋ テナント料3.20億</div>
+      <div style="margin-top:8px;font-size:16px;color:var(--color-danger);font-weight:700">3プラン中3位（最大）</div>
     </div>
-    <div class="cons-box">
-      <h4>懸念点</h4>
-      <ul>
-        <li class="critical">1F＋2F合計でも多機能要件（カフェ・視聴覚室・YAコーナー等）の全面実現が困難</li>
-        <li class="critical">2階利用に際して構造補強・昇降設備（エレベーター等）の追加工事が必要でコスト増</li>
-        <li>建設委員会の付帯意見を実現するストーリーが難しい</li>
-        <li>住民の新図書館建設への期待値に応えられない</li>
-        <li>躯体の耐用年数とリノベ費用のバランス設定が困難</li>
-      </ul>
+    <div style="background:var(--plan-c-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-c-header)">
+      <div style="font-size:16px;font-weight:700;color:var(--plan-c-header);margin-bottom:8px">PLAN C（改修）</div>
+      <div style="font-size:24px;font-weight:700;color:var(--color-caution)">2.33億円</div>
+      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出1.39億 ＋ 修繕費0.94億</div>
+      <div style="margin-top:8px;font-size:16px;color:var(--color-positive);font-weight:700">3プラン中1位（最少）</div>
     </div>
   </div>
 
-  <div style="background:var(--color-primary-soft);border-left:4px solid var(--color-primary);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
-    <div style="font-size:16px;font-weight:700;color:var(--color-primary);margin-bottom:10px">🏗 建設内容（確定）</div>
-    <div class="table-wrap">
-      <table style="min-width:380px">
-        <thead><tr><th>工事区分</th><th>規模</th><th>単価</th><th>金額</th></tr></thead>
-        <tbody>
-          <tr><td><strong>1Fフルリノベーション</strong><br><small>開架書庫として使用</small></td><td>150坪（約495㎡）</td><td>150万円/坪</td><td><strong>2億2,500万円</strong></td></tr>
-          <tr><td><strong>2F修繕</strong><br><small>閉架書庫として使用</small></td><td>150坪（約495㎡）</td><td>100万円/坪</td><td><strong>1億5,000万円</strong></td></tr>
-          <tr style="background:var(--color-primary-soft)"><td colspan="3"><strong>合計（概算）</strong></td><td><strong style="font-size:16px">3億7,500万円</strong></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div style="margin-top:12px;font-size:16px">
-      <strong>蔵書数（面積算出指標より逆算）：</strong>
-      開架エリア311㎡ × 85冊/㎡（指標170冊/㎡ ÷ ゾーニング係数2.0）＝ 約26,400冊（開架）。
-      開架：閉架 ＝ 6：4 より 閉架 ＝ 26,400 × 4/6 ≒ 約17,600冊。
-      計画蔵書数合計：約44,000冊。現有86,000冊から約42,000冊の除籍整理が必要。
-    </div>
+  <div class="warning-box" style="font-size:16px">
+    <strong>Plan C の長期コストリスク：</strong>
+    20年ベースでは Plan C が最安（2.33億円）だが、現図書館は築45年（1981年建設）。改修から20年後には築65年となり、
+    躯体の耐用年数・設備更新コストが再度発生するリスクが高い。
+    <strong>超長期ではPlan C のコスト優位性が低下する可能性がある。</strong>
+    また、Plan C を選択した場合でも将来的にピュアモルトクラブハウスの空調整備（約4.52億円）が別途必要となる点に注意。
   </div>
 
-  <div class="finance-section" style="margin-top:20px">
-    <h4>事業費・財源計画（概算）<small style="font-weight:400;color:var(--color-fg-muted)">　※詳細内訳は <a href="#zaigen" style="color:var(--color-primary)">事業費・財源内訳</a> を参照</small></h4>
-    <div class="finance-row total"><span class="f-label">想定事業費合計（リノベのみ）</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約3億7,500万円</span></div>
-    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label">昇降設備・構造補強</span><span class="f-value" style="color:var(--color-caution);font-weight:700">別途試算予定（追加）</span></div>
-    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">過疎債（充当率90%）＋交付税措置（70%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">充当 約3億3,800万円｜措置 約2億3,600万円</span></div>
-    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>一般財源（実質地方負担）</strong></span><span class="f-value" style="color:var(--color-caution);font-size:16px;font-weight:800">約1億3,900万円（37.0%）</span></div>
+  <div class="note" style="margin-top:10px;font-size:16px">
+    ※修繕費は公共施設の長寿命化計画モデルに基づく建設費（再調達価額）の25%で試算（ライフサイクルコスト.md・草津市将来コストシミュレーション等参照）。
+    実質持出＝補助金・交付税措置控除後の町の純負担。Plan B の建物修繕費は貸主負担のため町負担なし（ただしテナント契約条件に依存）。
+    Plan C の試算は昇降設備等の追加工事費を含まない現状事業費ベース。
   </div>
 
-  </div><!-- /pane-c -->
 
-</div><!-- /#plans -->
-
-<!-- 事業費・財源内訳 -->
-<div class="section" id="zaigen">
   <h2 class="section-title">
     <span class="num">財源計画</span>事業費・財源内訳（各プラン詳細）
   </h2>
@@ -1142,7 +793,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
           <th style="text-align:right">B:補助金（千円）</th>
           <th style="text-align:right">D:地方債（千円）</th>
           <th style="text-align:right">F:交付税措置（千円）</th>
-          <th style="text-align:right;color:var(--color-danger)">実質持出（千円）</th>
+          <th style="text-align:right;background:var(--color-danger);color:#fff">実質持出（千円）</th>
         </tr>
       </thead>
       <tbody>
@@ -1208,7 +859,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
           <th style="text-align:right">B:補助金（千円）</th>
           <th style="text-align:right">D:地方債（千円）</th>
           <th style="text-align:right">F:交付税措置（千円）</th>
-          <th style="text-align:right;color:var(--color-danger)">実質持出（千円）</th>
+          <th style="text-align:right;background:var(--color-danger);color:#fff">実質持出（千円）</th>
         </tr>
       </thead>
       <tbody>
@@ -1287,7 +938,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
           <th style="text-align:right">B:補助金（千円）</th>
           <th style="text-align:right">D:地方債（千円）<br><small style="font-weight:400">過疎債90%</small></th>
           <th style="text-align:right">F:交付税措置（千円）<br><small style="font-weight:400">D×70%</small></th>
-          <th style="text-align:right;color:var(--color-danger)">実質持出（千円）</th>
+          <th style="text-align:right;background:var(--color-danger);color:#fff">実質持出（千円）</th>
         </tr>
       </thead>
       <tbody>
@@ -1430,174 +1081,520 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     </table>
   </div>
   <div class="note" style="margin-top:10px">出典：20260604_図書館整備_事業費まとめ.xlsx｜単位：千円｜実質持出分 ＝ (D地方債 − F交付税措置) ＋ E一般財源</div>
+
 </div>
 
-<!-- ライフサイクルコスト比較 -->
-<div class="section" id="lcc">
+<!-- スケジュール（ガントチャート） -->
+<div class="section" id="schedule">
+  <h2 class="section-title"><span class="num">SECTION 3</span>工事スケジュール ガントチャート</h2>
+
+  <div class="gantt-wrap">
+    <table class="gantt-table">
+      <thead>
+        <tr>
+          <th class="g-task-hd" rowspan="2">タスク / フェーズ</th>
+          <th class="g-y26" colspan="3">2026年度</th>
+          <th class="g-y27" colspan="4">2027年度</th>
+          <th class="g-y28" colspan="4">2028年度</th>
+          <th class="g-y29" colspan="4">2029年度</th>
+          <th class="g-y30">2030年度</th>
+        </tr>
+        <tr>
+          <th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
+          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
+          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
+          <th class="g-qhd">Q1</th><th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
+          <th class="g-qhd">Q1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 書庫整備（旧幼稚園） -->
+        <tr><td class="g-grp g-grp-soko" colspan="17">■ 書庫整備（旧幼稚園）　→ この後、第2庁舎解体へと進む</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-soko">構想・改修・書類移動</td>
+          <td class="g-soko-c1">構想</td>
+          <td class="g-soko-c2 g-bar">改修工事</td>
+          <td class="g-soko-c3 g-bar">書類移動</td>
+          <td class="g-empty" colspan="13"></td>
+        </tr>
+        <!-- spacer -->
+        <tr class="g-spacer"><td colspan="17"></td></tr>
+        <!-- 解体撤去（PlanA・B） -->
+        <tr><td class="g-grp g-grp-com" colspan="17">■ 解体撤去工事（Plan A・Plan B）</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-com">構想・設計・工事</td>
+          <td class="g-com-c1">構想</td>
+          <td class="g-com-c2 g-bar" colspan="3">設計（〜2027Q1）</td>
+          <td class="g-com-c3 g-bar" colspan="3">工事（2027年度Q2〜Q4）</td>
+          <td class="g-empty" colspan="9"></td>
+        </tr>
+        <!-- spacer -->
+        <tr class="g-spacer"><td colspan="17"></td></tr>
+        <!-- Plan A -->
+        <tr><td class="g-grp g-grp-a" colspan="17">■ Plan A　ピュアモルトクラブハウス＋蔵書棟　（供用：2030年度）</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-a">構想・設計・工事</td>
+          <td class="g-a-c1" colspan="7">構想（〜2027年度）</td>
+          <td class="g-a-c2 g-bar" colspan="4">設計（2028年度）</td>
+          <td class="g-a-c3 g-bar" colspan="4">工事（2029年度）</td>
+          <td class="g-ms-a">★<br><small>供用</small></td>
+        </tr>
+        <!-- spacer -->
+        <tr class="g-spacer"><td colspan="17"></td></tr>
+        <!-- Plan B -->
+        <tr><td class="g-grp g-grp-b" colspan="17">■ Plan B　現図書館跡地テナント入居（直営）　（供用：2028年度Q4）</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-b">構想・設計・工事</td>
+          <td class="g-b-c1">構想</td>
+          <td class="g-b-prop g-bar" colspan="2">プロポーザル・事業者選定</td>
+          <td class="g-b-c2 g-bar" colspan="4">設計（〜2027年度）</td>
+          <td class="g-b-c3 g-bar" colspan="3">工事（2028年度Q1〜Q3）</td>
+          <td class="g-ms-b">★<br><small>供用</small></td>
+          <td class="g-empty" colspan="5"></td>
+        </tr>
+        <!-- spacer -->
+        <tr class="g-spacer"><td colspan="17"></td></tr>
+        <!-- Plan C -->
+        <tr><td class="g-grp g-grp-c" colspan="17">■ Plan C　現図書館 リノベーション　（供用：2029年度）</td></tr>
+        <tr>
+          <td class="g-lbl g-lbl-c">構想・設計・工事</td>
+          <td class="g-c-c1" colspan="3">構想</td>
+          <td class="g-empty">　</td>
+          <td class="g-c-c2 g-bar" colspan="2">設計（2027年度Q2〜Q3）</td>
+          <td class="g-empty">　</td>
+          <td class="g-c-c3 g-bar" colspan="4">工事（2028年度）</td>
+          <td class="g-ms-c">★<br><small>供用</small></td>
+          <td class="g-empty" colspan="4"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="gantt-legend">
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--plan-c-soft);border:1px solid var(--plan-c-header)"></span>構想</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:#2A3840"></span>設計</span>
+    <span class="legend-item"><span class="legend-swatch" style="background:var(--color-primary-dark)"></span>工事</span>
+    <span class="legend-item"><strong>★</strong>&nbsp;供用開始マイルストーン</span>
+    <span class="gantt-note">Q1=4〜6月 / Q2=7〜9月 / Q3=10〜12月 / Q4=1〜3月（日本の年度）</span>
+  </div>
+
+  <div class="table-wrap" style="margin-top:20px">
+    <table>
+      <thead>
+        <tr>
+          <th>フェーズ</th>
+          <th class="th-a">Plan A ピュアモルト</th>
+          <th class="th-b">Plan B 現図書館跡地テナント</th>
+          <th class="th-c">Plan C リノベ</th>
+          <th style="background:var(--color-primary-dark)">解体撤去<br><small>Plan A・B</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-weight:700">構想</td><td><span class="schedule-a">2026年度 Q2〜2027年度 Q4</span></td><td><span class="schedule-b">2026年度 Q2</span></td><td><span class="schedule-c">2026年度 Q2〜Q4</span></td><td><span class="schedule-com">2026年度 Q2</span></td></tr>
+        <tr><td style="font-weight:700">設計</td><td><span class="schedule-a">2028年度 Q1〜Q4</span></td><td><span class="schedule-b">2026年度 Q3〜2027年度 Q4</span></td><td><span class="schedule-c">2027年度 Q2〜Q3</span></td><td><span class="schedule-com">2026年度 Q3〜2027年度 Q1</span></td></tr>
+        <tr><td style="font-weight:700">工事</td><td><span class="schedule-a">2029年度（1年間）</span></td><td><span class="schedule-b">2028年度 Q1〜Q3</span></td><td><span class="schedule-c">2028年度</span></td><td><span class="schedule-com">2027年度 Q2〜Q4</span></td></tr>
+        <tr><td style="font-weight:700">供用開始</td><td style="text-align:center"><strong style="color:var(--plan-a-header);font-size:17px">2030年度</strong></td><td style="text-align:center"><strong style="color:var(--plan-b-header);font-size:17px">2028年度Q4</strong></td><td style="text-align:center"><strong style="color:var(--plan-c-header);font-size:17px">2029年度</strong></td><td style="text-align:center">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="warning-box" style="margin-top:12px">⚠ Plan Aは2029年度の<strong>1年間工事</strong>。供用開始は2030年度でB・Cより遅い。長期休館を避けるため<strong>臨時図書館の設置計画が必須</strong>。Plan Bは2028年度Q4に最速供用開始（B・Cの中で最短）。</div>
+</div>
+
+<!-- Plan A詳細 -->
+<!-- プラン詳細（タブUI） -->
+
+<!-- 付帯意見チェックリスト -->
+<div class="section" id="checklist">
   <h2 class="section-title">
-    <span class="num">コスト分析</span>ライフサイクルコスト（LCC）比較
+    <span class="num">NEW ｜ 答申書付帯意見との整合性</span>付帯意見整合性チェックリスト
     <span class="new-badge">NEW</span>
   </h2>
 
   <div class="toshi-note">
-    <strong>答申書より</strong>　候補地の優先順位：第1位＝現図書館周辺（Plan B・C相当）、第3位＝ピュアモルト近隣（Plan A相当）。
-    建設場所の最終選定は「政治的判断」と明記。
-    <a href="#toshinsho" class="toshi-badge">📋 答申書 候補地評価を参照</a>
+    <strong>答申書より</strong>　付帯意見は2023年3月答申書 §5「施設・設備の主要付帯意見」に基づく。
+    <a href="#toshinsho" class="toshi-badge">📋 答申書 §5 を参照</a>
   </div>
 
-  <div class="warning-box">
-    <strong>Plan B の「財源構造の罠」</strong><br>
-    30年間の名目総コストは Plan B（約7.05億円）&lt; Plan A（8.4億円）と Plan B が安く見える。
-    <strong>しかし財源の質に根本的な差がある。</strong>
-    Plan A は補助金＋交付税措置により実質持出は<strong>約2.35億円（28%）</strong>。
-    一方 Plan B は補助金・交付税措置が一切なく整備費＋テナント料30年分（1,600万円/年）の全額が一般財源。
-    <strong>実質持出ベースの30年累計負担は Plan B 約7.05億円 対 Plan A 約2.35億円 ＝ 約3倍の差。</strong>
-    ※テナント料は企画課試算（450㎡×10,000円/3.3㎡/月×12ヶ月）による。
+  <div class="check-legend">
+    <span class="ck-s">◎ 実現しやすい</span>
+    <span class="ck-o">○ 検討次第</span>
+    <span class="ck-t">△ 困難</span>
+    <span class="ck-x">× 実現困難</span>
   </div>
 
-  <!-- 3プラン比較カード -->
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0">
-
-    <!-- Plan A -->
-    <div style="border-radius:var(--radius-lg);border:2px solid var(--plan-a-header);overflow:hidden;display:flex;flex-direction:column">
-      <div style="background:var(--plan-a-header);color:#fff;padding:14px 18px">
-        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN A</div>
-        <div style="font-size:18px;font-weight:700">ピュアモルト＋蔵書棟</div>
-      </div>
-      <div style="padding:16px 18px;background:var(--color-bg-surface);display:flex;flex-direction:column;flex:1">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">名目事業費</span>
-          <strong style="text-align:right">約8億4,000万円</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">財源軽減（補助金＋交付税）</span>
-          <strong style="color:var(--color-positive);text-align:right">約6億0,500万円</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px;background:var(--color-positive-soft);border-left:4px solid var(--color-positive);border-radius:4px;margin:4px 0">
-          <span style="font-weight:700;color:var(--color-positive);flex-shrink:0">★ 実質持出（整備費）</span>
-          <strong style="color:var(--color-positive);font-size:18px;text-align:right">約2億3,500万円（28%）</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">ランニングコスト</span>
-          <span style="text-align:right">通常維持費のみ</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">30年累計実質持出</span>
-          <strong style="color:var(--color-positive);text-align:right">約2億3,500万円</strong>
-        </div>
-        <div style="margin-top:12px;background:var(--color-positive-soft);border-radius:var(--radius);padding:10px 14px;font-size:16px;color:var(--color-positive)">
-          補助金＋過疎債ダブル活用で実質持出が3プラン中最小
-        </div>
-      </div>
-    </div>
-
-    <!-- Plan B -->
-    <div style="border-radius:var(--radius-lg);border:2px solid var(--plan-b-header);overflow:hidden;display:flex;flex-direction:column">
-      <div style="background:var(--plan-b-header);color:#fff;padding:14px 18px">
-        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN B</div>
-        <div style="font-size:18px;font-weight:700">現図書館跡地テナント</div>
-      </div>
-      <div style="padding:16px 18px;background:var(--color-bg-surface);display:flex;flex-direction:column;flex:1">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">名目事業費（整備費）</span>
-          <strong style="text-align:right">約2億2,500万円</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">財源軽減（補助金・交付税）</span>
-          <strong style="color:var(--color-danger);text-align:right">なし（0円）</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px;background:var(--color-danger-soft);border-left:4px solid var(--color-danger);border-radius:4px;margin:4px 0">
-          <span style="font-weight:700;color:var(--color-danger);flex-shrink:0">★ 実質持出（整備費）</span>
-          <strong style="color:var(--color-danger);font-size:18px;text-align:right">約2億2,500万円（100%）</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">ランニング（テナント料）</span>
-          <strong style="color:var(--color-danger);text-align:right">1,600万円/年</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;font-size:16px;gap:8px;background:var(--color-danger-soft);border-left:4px solid var(--color-danger);border-radius:4px;margin:4px 0">
-          <span style="font-weight:700;color:var(--color-danger);flex-shrink:0">★ 実質持出（30年累計）</span>
-          <strong style="color:var(--color-danger);font-size:18px;text-align:right">約7億500万円（100%）</strong>
-        </div>
-        <div style="margin-top:12px;background:var(--color-danger-soft);border-radius:var(--radius);padding:10px 14px;font-size:16px;color:var(--color-danger)">
-          実質持出30年累計はPlan Aの約3倍・Plan Cの約5倍
-        </div>
-      </div>
-    </div>
-
-    <!-- Plan C -->
-    <div style="border-radius:var(--radius-lg);border:2px solid var(--plan-c-header);overflow:hidden;display:flex;flex-direction:column">
-      <div style="background:var(--plan-c-header);color:#fff;padding:14px 18px">
-        <div style="font-size:16px;opacity:.8;margin-bottom:4px">PLAN C</div>
-        <div style="font-size:18px;font-weight:700">現図書館リノベ</div>
-      </div>
-      <div style="padding:16px 18px;background:var(--color-bg-surface);display:flex;flex-direction:column;flex:1">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">名目事業費（リノベのみ）</span>
-          <strong style="text-align:right">約3億7,500万円</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">財源軽減（過疎債＋交付税）</span>
-          <strong style="color:var(--color-positive);text-align:right">約2億3,625万円</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 12px;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px;background:var(--color-caution-soft);border-left:4px solid var(--color-caution);border-radius:4px;margin:4px 0">
-          <span style="font-weight:700;color:var(--color-caution);flex-shrink:0">★ 実質持出（整備費）</span>
-          <strong style="color:var(--color-caution);font-size:18px;text-align:right">約1億3,875万円（37%）</strong>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--color-border-subtle);font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">ランニングコスト</span>
-          <span style="text-align:right">通常維持費のみ</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:9px 0;font-size:16px;gap:8px">
-          <span style="color:var(--color-fg-muted);flex-shrink:0">30年累計実質持出</span>
-          <strong style="color:var(--color-caution);text-align:right">約1億3,875万円</strong>
-        </div>
-        <div style="margin-top:12px;background:var(--color-caution-soft);border-radius:var(--radius);padding:10px 14px;font-size:16px;color:var(--color-caution)">
-          実質持出額は3プラン中最少。昇降設備確定後に再評価が必要。
-        </div>
-      </div>
-    </div>
-
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="min-width:200px">付帯意見の要件</th>
+          <th class="th-a" style="text-align:center;width:120px">Plan A</th>
+          <th class="th-b" style="text-align:center;width:120px">Plan B</th>
+          <th class="th-c" style="text-align:center;width:120px">Plan C</th>
+          <th style="min-width:180px">判断根拠</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>ユニバーサルデザイン（全体）</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は既存躯体の制約あり</td></tr>
+        <tr><td>エントランスホール（多目的）</td><td class="check-s">◎</td><td class="check-t">△</td><td class="check-t">△</td><td style="font-size:16px">Plan C は1,000㎡（1F+2F）確保でも既存躯体の動線制約あり</td></tr>
+        <tr><td>カフェ・軽食スペース</td><td class="check-s">◎</td><td class="check-t">△</td><td class="check-x">×</td><td style="font-size:16px">Plan B はテナント内規制の可能性</td></tr>
+        <tr><td>幼児・児童コーナー＋親子トイレ</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は空間的制約あり</td></tr>
+        <tr><td>YAコーナー（青少年サードプレイス）</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は専用スペース確保困難</td></tr>
+        <tr><td>視聴覚室・多目的室</td><td class="check-s">◎</td><td class="check-o">○</td><td class="check-t">△</td><td style="font-size:16px">Plan C は1,000㎡（1F+2F）でも専用室の確保に制約あり</td></tr>
+        <tr><td>Wi-Fi・パソコンブース</td><td class="check-s">◎</td><td class="check-s">◎</td><td class="check-o">○</td><td style="font-size:16px">全プランで導入可能（Plan Cは制限あり）</td></tr>
+        <tr class="check-row-critical"><td>バンビ号（移動図書館）車庫</td><td class="check-s">◎</td><td class="check-x">×</td><td class="check-x">×</td><td style="font-size:16px">Plan B は民間施設内、Plan C はリノベ後敷地内での確保が困難</td></tr>
+        <tr class="check-row-critical"><td><strong>バイオガス空調</strong>（鹿追の特色）</td><td class="check-t">△</td><td class="check-x">×</td><td class="check-t">△</td><td style="font-size:16px">答申書が特に強調。Plan B はNG。Plan A・C は技術的検討中</td></tr>
+        <tr><td><strong>直営管理</strong>（答申書推奨）</td><td class="check-s">◎</td><td class="check-s">◎（建物は民間、運営は直営）</td><td class="check-s">◎</td><td style="font-size:16px">全プランとも直営。指定管理・PPPは採らない</td></tr>
+        <tr><td>格調高い施設・デザイン性</td><td class="check-s">◎（受賞建築）</td><td class="check-t">△</td><td class="check-t">△</td><td style="font-size:16px">Plan A は受賞建築を活用</td></tr>
+        <tr><td>自動貸出機・除菌機</td><td class="check-s">◎</td><td class="check-s">◎</td><td class="check-o">○</td><td style="font-size:16px">Plan C は設置スペース要確認</td></tr>
+        <tr><td><strong>現有86,000冊の維持</strong></td><td class="check-s">◎（85,000冊でほぼ維持）</td><td class="check-t">△（50,000冊・△36,000冊）</td><td class="check-t">△（約44,000冊・△42,000冊）</td><td style="font-size:16px">Plan A：85,000冊（開架51,000＋閉架34,000）でほぼ維持（△1,000冊）。Plan B：50,000冊（△36,000冊）—大幅削減。Plan C：約44,000冊（△約42,000冊）—大幅除籍整理が必要</td></tr>
+        <tr><td>休館期間の最小化（付帯意見）</td><td class="check-t">△（工事1年間）</td><td class="check-t">△</td><td class="check-t">△（工事期間中の部分休館が必要）</td><td style="font-size:16px">答申書特記事項：長期休館を避けること。全プラン共通課題</td></tr>
+      </tbody>
+      <tfoot>
+        <tr style="background:var(--color-primary-soft);font-weight:700">
+          <td>付帯意見充足数（◎の数）</td>
+          <td style="text-align:center;color:var(--plan-a-header);font-size:18px">12 / 14</td>
+          <td style="text-align:center;color:var(--color-caution);font-size:18px">4 / 14</td>
+          <td style="text-align:center;color:var(--color-caution);font-size:18px">4 / 14</td>
+          <td style="font-size:16px">Plan A 12/14 ＞ Plan B・C 4/14（Plan B は蔵書数大幅縮小により「現有86,000冊の維持」が×）</td>
+        </tr>
+      </tfoot>
+    </table>
   </div>
-
-
-  <!-- 3プラン LCC総額比較カード -->
-  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:28px 0 10px">LCC総額比較（実質持出＋予想修繕費・20年）</h3>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
-    <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-a-header)">
-      <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:8px">PLAN A（新築）</div>
-      <div style="font-size:24px;font-weight:700;color:var(--plan-a-header)">4.45億円</div>
-      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.35億 ＋ 修繕費2.10億</div>
-      <div style="margin-top:8px;font-size:16px;color:var(--color-positive);font-weight:700">3プラン中2位</div>
-    </div>
-    <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-b-header)">
-      <div style="font-size:16px;font-weight:700;color:var(--plan-b-header);margin-bottom:8px">PLAN B（テナント・20年）</div>
-      <div style="font-size:24px;font-weight:700;color:var(--color-danger)">5.45億円</div>
-      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.25億 ＋ テナント料3.20億</div>
-      <div style="margin-top:8px;font-size:16px;color:var(--color-danger);font-weight:700">3プラン中3位（最大）</div>
-    </div>
-    <div style="background:var(--plan-c-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-c-header)">
-      <div style="font-size:16px;font-weight:700;color:var(--plan-c-header);margin-bottom:8px">PLAN C（改修）</div>
-      <div style="font-size:24px;font-weight:700;color:var(--color-caution)">2.33億円</div>
-      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出1.39億 ＋ 修繕費0.94億</div>
-      <div style="margin-top:8px;font-size:16px;color:var(--color-positive);font-weight:700">3プラン中1位（最少）</div>
-    </div>
-  </div>
-
-  <div class="warning-box" style="font-size:16px">
-    <strong>Plan C の長期コストリスク：</strong>
-    20年ベースでは Plan C が最安（2.33億円）だが、現図書館は築45年（1981年建設）。改修から20年後には築65年となり、
-    躯体の耐用年数・設備更新コストが再度発生するリスクが高い。
-    <strong>超長期ではPlan C のコスト優位性が低下する可能性がある。</strong>
-    また、Plan C を選択した場合でも将来的にピュアモルトクラブハウスの空調整備（約4.52億円）が別途必要となる点に注意。
-  </div>
-
-  <div class="note" style="margin-top:10px;font-size:16px">
-    ※修繕費は公共施設の長寿命化計画モデルに基づく建設費（再調達価額）の25%で試算（ライフサイクルコスト.md・草津市将来コストシミュレーション等参照）。
-    実質持出＝補助金・交付税措置控除後の町の純負担。Plan B の建物修繕費は貸主負担のため町負担なし（ただしテナント契約条件に依存）。
-    Plan C の試算は昇降設備等の追加工事費を含まない現状事業費ベース。
-  </div>
-
 </div>
+
+<!-- 評価マトリックス -->
+<div class="section" id="matrix">
+  <h2 class="section-title">
+    <span class="num">SECTION 4 ｜ 重み付き意思決定マトリックス</span>多基準評価マトリックス
+    <span class="update-badge-sm">スコア修正済み</span>
+  </h2>
+
+  <div class="toshi-note">
+    <strong>答申書より</strong>　「建設委員会・付帯意見整合性」の評価基準は答申書の3コンセプト・14付帯意見との整合度。
+    <a href="#toshinsho" class="toshi-badge">📋 答申書コンセプトを参照</a>
+  </div>
+
+  <div class="info-box" style="margin-bottom:16px">
+    <strong>スコア修正根拠：</strong>
+    ④委員会整合性：Plan A→★3（候補地の一つ、付帯意見12/14充足）／Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）。
+    ⑤実現容易性：Plan B→★1（「非常に困難」評価と整合）。
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="min-width:180px">評価基準</th>
+          <th style="width:70px;text-align:center">重み</th>
+          <th class="th-a" style="width:70px;text-align:center">A<br>スコア</th>
+          <th class="th-a" style="width:80px;text-align:center">A<br>加重値</th>
+          <th class="th-b" style="width:70px;text-align:center">B<br>スコア</th>
+          <th class="th-b" style="width:80px;text-align:center">B<br>加重値</th>
+          <th class="th-c" style="width:70px;text-align:center">C<br>スコア</th>
+          <th class="th-c" style="width:80px;text-align:center">C<br>加重値</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>①文化的・シンボリック価値</td><td style="text-align:center;font-weight:700">20%</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">1.00</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.40</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.40</td></tr>
+        <tr><td>②初期投資コスト効率</td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.60</td></tr>
+        <tr><td>③利用者集客・使用促進</td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.45</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
+        <tr class="new-row"><td><strong>④建設委員会・付帯意見整合性 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-mid score-updated" style="text-align:center"><strong>★3↑</strong></td><td class="score-mid score-updated" style="text-align:center"><strong>0.45</strong></td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td></tr>
+        <tr class="new-row"><td><strong>⑤実現容易性・リスク管理 🔄</strong></td><td style="text-align:center;font-weight:700">15%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.30</td><td class="score-low score-updated" style="text-align:center"><strong>★1↓</strong></td><td class="score-low score-updated" style="text-align:center"><strong>0.15</strong></td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.75</td></tr>
+        <tr><td>⑥事業期間（短縮評価）</td><td style="text-align:center;font-weight:700">10%</td><td class="score-low" style="text-align:center">★2</td><td class="score-low" style="text-align:center">0.20</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td><td class="score-high" style="text-align:center">★4</td><td class="score-high" style="text-align:center">0.40</td></tr>
+        <tr><td>⑦地域住民・社会的期待への対応</td><td style="text-align:center;font-weight:700">10%</td><td class="score-high" style="text-align:center">★5</td><td class="score-high" style="text-align:center">0.50</td><td class="score-mid" style="text-align:center">★3</td><td class="score-mid" style="text-align:center">0.30</td><td class="score-low" style="text-align:center">★1</td><td class="score-low" style="text-align:center">0.10</td></tr>
+        <tr>
+          <td><strong>総合スコア（満点5.00）</strong></td>
+          <td style="text-align:center;font-weight:700">100%</td>
+          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-a-header)">3.20</td>
+          <td colspan="2" class="score-total" style="text-align:center;font-size:20px;color:var(--plan-b-header)">2.90</td>
+          <td colspan="2" class="score-total" style="text-align:center">2.85</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note" style="margin-top:16px">
+    <strong>修正根拠：</strong>
+    ④委員会整合性：Plan A→★3（候補地の一つ＋付帯意見12/14充足）、Plan B→★1（商業施設内という制約によりバイオガス空調・バンビ号車庫・格調ある施設が実現困難）｜
+    ⑤実現容易性：Plan B→★1に修正（「非常に困難」バッジとの整合）｜
+    結果：Plan A（3.20）＞ Plan B（2.90）＞ Plan C（2.85）。付帯意見充足度・文化的価値・住民期待では<strong>Plan Aが突出</strong>。コスト・集客・スケジュールでは<strong>Plan Bが優位</strong>。
+  </div>
+
+  <div style="margin-top:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:16px;color:var(--color-fg-muted)">
+    スコアは答申書（2023年3月）の3コンセプト・14付帯意見を反映
+    <a href="#toshinsho" class="toshi-badge">📋 答申書全文を参照</a>
+    <a href="#matrix" class="toshi-badge">📊 評価マトリックスを参照</a>
+  </div>
+</div>
+
+<!-- リスク評価 -->
+<div class="section" id="risk">
+  <h2 class="section-title">
+    <span class="num">SECTION 5 ｜ リスクヒートマップ分析</span>リスク評価マトリックス
+    <span class="update-badge-sm">答申書追記</span>
+  </h2>
+
+  <div class="toshi-note">
+    <strong>答申書付帯意見</strong>　「建設・移転の際には、長期間の休館を避けるか、継続的に利用が可能になるよう計画をお願いしたい。」
+    <a href="#toshinsho" class="toshi-badge">📋 答申書 特記事項を参照</a>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>リスク項目</th><th>対象</th><th style="text-align:center">確率</th><th style="text-align:center">影響</th><th style="text-align:center">評価</th><th>主な対策</th></tr>
+      </thead>
+      <tbody>
+        <!-- Plan A -->
+        <tr><td colspan="6" style="background:var(--plan-a-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan A　ピュアモルトクラブハウス＋蔵書棟</td></tr>
+        <tr><td>委員会・議会の反対・理解不足</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">高</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>丁寧な説明・合意形成プロセスの設計</td></tr>
+        <tr><td>設計事業者の選考難航・品質低下</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>プロポーザル方式による慎重な選考</td></tr>
+        <tr><td>青少年施設転換の調整長期化</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>代替施設の事前確保・段階的移行計画</td></tr>
+        <tr><td>事業費の予算超過</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>CM方式の採用・予備費設計段階での確保</td></tr>
+        <tr><td>建設中の長期休館（利用者離れ）</td><td style="color:var(--plan-a-header);font-weight:700">A</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-yellow">🟡 管理可能</span></td><td>答申付帯意見通り臨時開設の検討</td></tr>
+        <!-- Plan B -->
+        <tr><td colspan="6" style="background:var(--plan-b-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan B　現図書館跡地テナント入居（直営）</td></tr>
+        <tr><td><strong>テナント契約条件（賃料・解約・更新）の不確実性</strong></td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>長期賃貸借契約の締結と条件の事前精査</td></tr>
+        <tr><td>文化施設としての評価低下・PR失敗</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">高</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>デザインガイドライン策定・内装質の確保</td></tr>
+        <tr><td>民間事業者との調整増加による遅延</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">高</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>明確な役割分担契約・定期調整会議</td></tr>
+        <tr><td>民間事業者との交渉決裂</td><td style="color:var(--plan-b-header);font-weight:700">B</td><td style="text-align:center">低</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-yellow">🟡 管理可能</span></td><td>代替候補地・プランの事前設計</td></tr>
+        <!-- Plan C -->
+        <tr><td colspan="6" style="background:var(--plan-c-header);color:#fff;font-weight:700;font-size:16px;padding:8px 14px">■ Plan C　現図書館リノベーション</td></tr>
+        <tr><td>住民期待と整備内容の大幅な乖離</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">高</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>早期の住民説明・期待値管理の徹底</td></tr>
+        <tr><td>躯体老朽化による追加工事費発生</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>詳細な建物診断・予備費の確保</td></tr>
+        <tr><td><strong>2階改修に伴う構造補強・昇降設備工事費増</strong></td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">高</td><td style="text-align:center"><span class="risk-badge risk-red">🔴 重大</span></td><td>構造診断の早期実施・概算費用の精査</td></tr>
+        <tr><td>将来的な収容能力不足</td><td style="color:var(--plan-c-header);font-weight:700">C</td><td style="text-align:center">中</td><td style="text-align:center">中</td><td style="text-align:center"><span class="risk-badge risk-orange">🟠 注意</span></td><td>拡張余地の確保・デジタル化推進</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note" style="margin-top:12px">v2.1更新：「PPP管理と直営推奨の整合問題（B）」「蔵書削減反発（A）」を削除。「2階改修に伴う構造補強・昇降設備工事費増（C）」「テナント契約条件の不確実性（B）」を追加。</div>
+</div>
+
+
+<!-- 規模・面積 --><div class="section" id="plans">
+  <h2 class="section-title">
+    <span class="num">LAYER 3 — プラン詳細</span>各プランの詳細
+  </h2>
+
+  <!-- タブナビ -->
+  <div class="tab-nav">
+    <button class="tab-btn" id="btn-a" onclick="switchTab('a')">
+      Plan A　ピュアモルト＋蔵書棟
+    </button>
+    <button class="tab-btn" id="btn-b" onclick="switchTab('b')">
+      Plan B　現図書館跡地テナント
+    </button>
+    <button class="tab-btn" id="btn-c" onclick="switchTab('c')">
+      Plan C　現図書館リノベ
+    </button>
+  </div>
+
+  <!-- Plan A ペイン -->
+  <div class="tab-pane" id="pane-a">
+
+  <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;border-left:4px solid var(--plan-a-header)">
+    <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第3位 ｜ 付帯意見充足：12/14 ◎最高</div>
+    <div style="font-size:18px;font-weight:700;color:var(--color-fg);margin-bottom:2px">本のある暮らしが、ここから始まる。</div>
+    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">森と建築と本が出会う、北海道でいちばん美しい図書館</div>
+    <div style="font-size:16px;color:var(--color-fg-muted)">受賞歴ある建築物（北海道赤レンガ賞・日本公共建築賞）の歴史・文化性と純粋な読書環境の極みを融合。答申書が求める「格調の高い、町民の誇りとなる」施設像に最も合致するプラン。バイオガス空調・直営管理・格調ある施設等の付帯意見を実現できる。蔵書棟のみで<strong>85,000冊</strong>（開架51,000冊＋閉架34,000冊）を収蔵し、現有蔵書をほぼ維持できる計画。</div>
+  </div>
+
+  <div class="success-box">答申書3コンセプトとの整合：①やさしい図書館 ◎（最高の読書環境）｜②学びが育つ ◎（格調ある書架・静謐空間）｜③交流が生まれる ◎（多目的ゾーニング可能）</div>
+
+  <div style="background:var(--color-caution-soft);border:1px solid var(--color-caution);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
+    <div style="background:var(--color-caution);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">やや困難</div>
+    <div style="font-size:16px;color:var(--color-fg)">現施設の基本理念を最大限に尊重しながら空調等の整備を行う必要があり、蔵書棟以外の整備についても十分な検討時間と整備コストが求められる。設計・施工の各段階で高度な調整が必要となる。</div>
+  </div>
+
+  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
+  <ul style="list-style:none">
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 新蔵書棟の建設（水回り設備不要の合理的設計）</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 既存本棟への空調設備導入（<span class="toshi-req">答申推奨</span>バイオガス空調を検討）</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 蔵書規模に対応した新書架システムの整備</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 外壁・内装の塗装修繕（建物の美観・耐久性向上）</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 利用者サービス拠点（受付・貸出カウンター）の整備</li>
+  </ul>
+
+  <div class="pros-cons-grid" style="margin-top:20px">
+    <div class="pros-box">
+      <h4>長所</h4>
+      <ul>
+        <li>道内随一の読書環境—答申書コンセプト全項目◎</li>
+        <li>受賞建築物活用で地域の誇りを可視化</li>
+        <li>バイオガス空調・直営管理等、付帯意見12/14充足</li>
+        <li>格調高い施設—町民の誇りとなる実現可能性が高い</li>
+      </ul>
+    </div>
+    <div class="cons-box">
+      <h4>懸念点</h4>
+      <ul>
+        <li>委員会の第3候補地（第1候補でない）—合意形成が必要</li>
+        <li>青少年施設転換の調整が必要</li>
+        <li>設計事業者の選考に高度な慎重さが必要</li>
+        <li>供用開始2030年・建設期間の長期休館リスク</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:var(--color-caution-soft);border-left:4px solid var(--color-caution);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
+    <div style="font-size:16px;font-weight:700;color:var(--color-caution);margin-bottom:8px">⚠ 追加検討事項</div>
+    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">蔵書棟の新設に加え、受賞建築である本棟の塗装修繕をはじめとする整備も必須となる。特に空調設備については、北海道赤レンガ賞・日本公共建築賞を受賞した格調ある建物の外観と内観を損なわないよう、一般的な室内機・室外機の配置は避けたい。バイオガス活用を含め、建築の品格にふさわしい空調方式の選定には高度な技術的配慮と慎重な検討が不可欠である。</p>
+    <p style="font-size:16px;color:var(--color-fg);margin:0">これらの要件を踏まえると、蔵書棟の建設費のみならず本棟整備費を含めた総事業費は相当規模になることが想定される。設計段階において費用全体を丁寧に精査する必要がある。</p>
+  </div>
+
+  <div class="finance-section" style="margin-top:20px">
+    <h4>事業費・財源計画（概算）</h4>
+    <div class="finance-row total"><span class="f-label">想定事業費合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約8億4,000万円</span></div>
+    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">① 社会資本整備交付金（補助率40%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">約3億4,500万円</span></div>
+    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">② 過疎債（充当率100%）+ 公適債（充当率90%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">起債合計 約4億6,800万円<br><small>うち交付税措置 約3億0,300万円</small></span></div>
+    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>実質持出分</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億3,500万円（28%）</span></div>
+  </div>
+
+  </div><!-- /pane-a -->
+
+  <!-- Plan B ペイン -->
+  <div class="tab-pane" id="pane-b">
+
+  <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-b-header)">
+    <div style="font-size:16px;font-weight:700;color:var(--plan-b-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：<span style="color:var(--plan-b-header)">第1候補地（現図書館周辺）✅</span> ｜ 付帯意見充足：4/14</div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:2px">日常の動線に、本がある。</div>
+    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">商業施設と一体で、街なかに根づく図書館</div>
+    <div style="font-size:16px;color:var(--color-fg-muted)">現図書館の場所（答申書第1候補地）に新たな商業施設を建設し、テナント面積<strong>450㎡</strong>に図書館を整備する。テナント内に開架30,000冊、別棟閉架書庫（80㎡）に20,000冊、合計<strong>50,000冊</strong>規模。建物は民間施設だが、図書館の運営は町が直接行う（<strong>指定管理・PPP方式は採らない</strong>）。集客力のある商業施設との複合利用で「ついでに立ち寄る」文化を醸成。現有86,000冊からは縮小となるが、閉架書庫を別棟で確保することで収蔵機能を補完する。</div>
+  </div>
+
+  <div class="info-box">
+    <strong>答申書との整合：</strong>
+    ①第1候補地（現図書館周辺）に対応 ✅ ②直営運営で答申推奨を実現 ✅ ③残存課題：バイオガス空調・バンビ号車庫の実現困難、テナント料が継続的ランニングコストとして発生
+  </div>
+
+  <div style="background:var(--color-danger-soft);border:1px solid var(--color-danger);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
+    <div style="background:var(--color-danger);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">非常に困難</div>
+    <div style="font-size:16px;color:var(--color-fg)">3プランの中で最も実現が難しく、事業費に見合う図書館としての文化的価値のストーリー構築が求められる一方、時間的制約の中で民間事業者が主体となる複雑な事業調整が必要となる。</div>
+  </div>
+
+  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
+  <ul style="list-style:none">
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ テナントスペースへの書架・展示什器の設置</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 利用者用家具・設備什器の調達・設置</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 図書館管理・事務スペースの整備</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 情報システム・ICT設備の導入</li>
+  </ul>
+
+  <div class="pros-cons-grid" style="margin-top:20px">
+    <div class="pros-box">
+      <h4>長所</h4>
+      <ul>
+        <li>答申書第1候補地（現図書館周辺）への対応で立地の優位性</li>
+        <li>商業施設からの自然な来館誘導</li>
+        <li>民間建設でイニシャルコストを抑制</li>
+        <li>直営運営により答申書推奨の管理形態を実現 ✅</li>
+        <li>供用開始2028年度Q4（Plan A・Cより早い）</li>
+      </ul>
+    </div>
+    <div class="cons-box">
+      <h4>懸念点</h4>
+      <ul>
+        <li>デザイン性・文化的価値の創出が困難（商業施設内という制約）</li>
+        <li>付帯意見（バイオガス空調・バンビ号車庫等）が実現困難</li>
+        <li>テナント料が継続的なランニングコストとして発生（1,600万円/年・30年で約4億8,000万円）</li>
+        <li>テナント契約条件（賃料改定・解約・更新）の長期的な不確実性</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:var(--color-caution-soft);border-left:4px solid var(--color-caution);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
+    <div style="font-size:16px;font-weight:700;color:var(--color-caution);margin-bottom:8px">⚠ 追加検討事項（面積・蔵書数の試算）</div>
+    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">テナント450㎡（開架30,000冊）に別棟閉架書庫（80㎡・20,000冊）を加えて合計<strong>50,000冊</strong>規模を確保する。現有86,000冊から36,000冊の縮小となるが、閉架書庫の別棟整備により収蔵機能を補完する。答申書が求める蔵書規模との整合性確保が引き続き課題となる。</p>
+    <p style="font-size:16px;color:var(--color-fg);margin:0 0 8px">蔵書数の大幅減少を補うために閲覧席・読書環境・空間デザインに格別の工夫が必要である。また、蔵書を補完するために別棟として閉架書庫を建築する選択肢もあるが、その場合は事業規模がさらに拡大する。</p>
+    <p style="font-size:16px;color:var(--color-fg);margin:0">商業施設のテナントとして図書館を位置づけるためには、テナント料（1,600万円/年・30年で約4億8,000万円）に見合う「図書館」としての機能的・文化的効果を明確なストーリーで示す必要がある。</p>
+  </div>
+
+  <div class="finance-section" style="margin-top:20px">
+    <h4>事業費・財源計画（概算）</h4>
+    <div class="finance-row total"><span class="f-label">イニシャルコスト合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約2億2,500万円</span></div>
+    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>テナント料（毎年発生）</strong></span><span class="f-value" style="color:var(--color-caution);font-weight:700">1,600万円/年（30年 約4億8,000万円）</span></div>
+    <div class="finance-row" style="background:var(--color-danger-soft)"><span class="f-label"><strong>一般財源（実質地方負担）</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億3,500万円（100%）</span></div>
+  </div>
+
+  </div><!-- /pane-b -->
+
+  <!-- Plan C ペイン -->
+  <div class="tab-pane" id="pane-c">
+
+  <div style="background:var(--plan-c-soft);border-radius:var(--radius);padding:16px 20px;margin-bottom:16px;border-left:4px solid var(--plan-c-header)">
+    <div style="font-size:16px;font-weight:700;color:var(--plan-c-header);margin-bottom:4px">コンセプト ｜ 委員会候補地：第1位（制約大） ｜ 付帯意見充足：4/14</div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:2px">工夫で、図書館を育てる。</div>
+    <div style="font-size:16px;font-style:italic;color:var(--color-fg-muted);margin-bottom:6px">制約の中から生まれる、鹿追らしい図書館再生</div>
+    <div style="font-size:16px;color:var(--color-fg-muted)">候補地第1位・直営管理で答申書の基本方針に沿う。既存建物の<strong>1Fフルリノベ（開架311㎡）＋2F修繕（閉架）</strong>により約1,000㎡を整備。計画蔵書数は<strong>約44,000冊</strong>（開架約26,400冊＋閉架約17,600冊）で、現有86,000冊から約42,000冊の除籍整理が必要。1F＋2F合計でも多機能化（カフェ・視聴覚室・YAコーナー等）の全面実現は困難で、<strong>構造補強・昇降設備等の追加工事費</strong>が発生する。</div>
+  </div>
+
+  <div class="info-box">答申書候補地第1位に相当。蔵書数・直営管理は適合。ただし2F改修に伴う<strong>構造補強・昇降設備（エレベーター等）の追加工事費</strong>が発生し、多機能要件（14項目中4項目のみ充足）の実現は困難。</div>
+
+  <div style="background:var(--color-positive-soft);border:1px solid var(--color-positive);border-radius:var(--radius);padding:12px 18px;margin:16px 0;display:flex;align-items:flex-start;gap:12px">
+    <div style="background:var(--color-positive);color:#fff;font-size:16px;font-weight:700;padding:4px 10px;border-radius:4px;white-space:nowrap;margin-top:2px">比較的容易</div>
+    <div style="font-size:16px;color:var(--color-fg)">1階部分のみの整備に限定することで、3プランの中で最も実現しやすい。ただし、整備範囲を絞るほど答申書が求める複合機能との整合性確保が難しくなるトレードオフがある。</div>
+  </div>
+
+  <h3 style="font-size:17px;font-weight:700;color:var(--color-primary);margin:16px 0 10px">事業内容</h3>
+  <ul style="list-style:none">
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 電気設備・機械設備の全面更新（省エネ・安全性向上）</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 利用者向け家具・備品・案内サインの刷新</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative;border-bottom:1px solid var(--color-border-subtle)">▶ 内壁・天井の塗装修繕（施設の美観・清潔感の回復）</li>
+    <li style="font-size:16px;padding:5px 0 5px 22px;position:relative">▶ 書架・什器の更新整備</li>
+  </ul>
+
+  <div class="pros-cons-grid" style="margin-top:20px">
+    <div class="pros-box">
+      <h4>特徴（長所）</h4>
+      <ul>
+        <li>候補地第1位・直営管理・リスク最小</li>
+        <li>コスト最低・調整事項最小</li>
+        <li>既存の温かい雰囲気・地域密着性を継続</li>
+      </ul>
+    </div>
+    <div class="cons-box">
+      <h4>懸念点</h4>
+      <ul>
+        <li class="critical">1F＋2F合計でも多機能要件（カフェ・視聴覚室・YAコーナー等）の全面実現が困難</li>
+        <li class="critical">2階利用に際して構造補強・昇降設備（エレベーター等）の追加工事が必要でコスト増</li>
+        <li>建設委員会の付帯意見を実現するストーリーが難しい</li>
+        <li>住民の新図書館建設への期待値に応えられない</li>
+        <li>躯体の耐用年数とリノベ費用のバランス設定が困難</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="background:var(--color-primary-soft);border-left:4px solid var(--color-primary);border-radius:var(--radius);padding:14px 18px;margin-top:20px">
+    <div style="font-size:16px;font-weight:700;color:var(--color-primary);margin-bottom:10px">🏗 建設内容（確定）</div>
+    <div class="table-wrap">
+      <table style="min-width:380px">
+        <thead><tr><th>工事区分</th><th>規模</th><th>単価</th><th>金額</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1Fフルリノベーション</strong><br><small>開架書庫として使用</small></td><td>150坪（約495㎡）</td><td>150万円/坪</td><td><strong>2億2,500万円</strong></td></tr>
+          <tr><td><strong>2F修繕</strong><br><small>閉架書庫として使用</small></td><td>150坪（約495㎡）</td><td>100万円/坪</td><td><strong>1億5,000万円</strong></td></tr>
+          <tr style="background:var(--color-primary-soft)"><td colspan="3"><strong>合計（概算）</strong></td><td><strong style="font-size:16px">3億7,500万円</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:12px;font-size:16px">
+      <strong>蔵書数（面積算出指標より逆算）：</strong>
+      開架エリア311㎡ × 85冊/㎡（指標170冊/㎡ ÷ ゾーニング係数2.0）＝ 約26,400冊（開架）。
+      開架：閉架 ＝ 6：4 より 閉架 ＝ 26,400 × 4/6 ≒ 約17,600冊。
+      計画蔵書数合計：約44,000冊。現有86,000冊から約42,000冊の除籍整理が必要。
+    </div>
+  </div>
+
+  <div class="finance-section" style="margin-top:20px">
+    <h4>事業費・財源計画（概算）</h4>
+    <div class="finance-row total"><span class="f-label">想定事業費合計（リノベのみ）</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約3億7,500万円</span></div>
+    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label">昇降設備・構造補強</span><span class="f-value" style="color:var(--color-caution);font-weight:700">別途試算予定（追加）</span></div>
+    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">過疎債（充当率90%）＋交付税措置（70%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">充当 約3億3,800万円｜措置 約2億3,600万円</span></div>
+    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>一般財源（実質地方負担）</strong></span><span class="f-value" style="color:var(--color-caution);font-size:16px;font-weight:800">約1億3,900万円（37.0%）</span></div>
+  </div>
+
+  </div><!-- /pane-c -->
+
+</div><!-- /#plans -->
 
 <!-- 共通事項 -->
 <div class="section" id="common">
