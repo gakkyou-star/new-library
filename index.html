@@ -240,23 +240,20 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 .gantt-wrap{overflow-x:auto;margin:0 0 16px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-bg-surface)}
 .gantt-table{width:100%;border-collapse:collapse;font-size:16px;min-width:900px;table-layout:fixed}
 .gantt-table th,.gantt-table td{border:1px solid var(--color-border-subtle);padding:9px 5px;text-align:center;vertical-align:middle;line-height:1.5;overflow:hidden}
-.g-task-hd{background:var(--color-primary);color:#fff;font-weight:700;font-size:16px;padding:10px 12px;width:200px;min-width:200px;text-align:left}
+.g-task-hd{background:var(--color-primary);color:#fff;font-weight:700;font-size:16px;padding:10px 12px;width:220px;min-width:220px;text-align:left}
 .g-y26{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
 .g-y27{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
 .g-y28{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
 .g-y29{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
 .g-y30{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
 .g-qhd{background:#EDECEA;color:#617279;font-weight:700;font-size:16px;padding:6px 2px}
-.g-grp{font-weight:700;font-size:16px;text-align:left;padding:9px 14px;letter-spacing:.04em}
-.g-grp-a{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-a-header)}
-.g-grp-b{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-b-header)}
-.g-grp-c{background:#3A4A4F;color:#fff;border-left:5px solid var(--plan-c-header)}
-.g-grp-com{background:#3A4A4F;color:#fff}
-.g-lbl{text-align:left;font-size:16px;font-weight:600;background:#F5F4F2;padding:6px 10px;white-space:nowrap;color:var(--color-fg)}
-.g-lbl-a{border-left:4px solid var(--plan-a-header)}
-.g-lbl-b{border-left:4px solid var(--plan-b-header)}
-.g-lbl-c{border-left:4px solid var(--plan-c-header)}
-.g-lbl-com{border-left:4px solid #546E7A}
+.g-lbl{text-align:left;font-size:14px;font-weight:600;background:#F5F4F2;padding:8px 10px;color:var(--color-fg);white-space:normal;line-height:1.4}
+.g-lbl .g-plan-name{font-size:13px;font-weight:700;color:#fff;display:block;margin:-8px -10px 6px;padding:5px 10px;letter-spacing:.02em}
+.g-lbl .g-task-name{font-size:13px;font-weight:600;color:var(--color-fg-muted);display:block}
+.g-lbl-a{border-left:4px solid var(--plan-a-header)}.g-lbl-a .g-plan-name{background:var(--plan-a-header)}
+.g-lbl-b{border-left:4px solid var(--plan-b-header)}.g-lbl-b .g-plan-name{background:var(--plan-b-header)}
+.g-lbl-c{border-left:4px solid var(--plan-c-header)}.g-lbl-c .g-plan-name{background:var(--plan-c-header)}
+.g-lbl-com{border-left:4px solid #546E7A}.g-lbl-com .g-plan-name{background:#546E7A}
 .g-empty{background:#F5F4F2}
 .g-bar{color:#fff;font-weight:700;font-size:16px}
 .g-com-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
@@ -281,7 +278,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 .gantt-note{font-size:16px;color:var(--color-fg-muted);margin-left:auto}
 .g-spacer td{height:36px;background:var(--color-bg);border-left:none;border-right:none;border-top:2px solid var(--color-border);border-bottom:none;padding:0}
 .g-grp-soko{background:#3A4A4F;color:#fff;border-left:5px solid #90A4AE}
-.g-lbl-soko{border-left:4px solid #546E7A}
+.g-lbl-soko{border-left:4px solid #90A4AE}.g-lbl-soko .g-plan-name{background:#546E7A}
 .g-soko-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
 .g-soko-c2{background:#607880;color:#fff}
 .g-soko-c3{background:#3A4A4F;color:#fff}
@@ -1201,9 +1198,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       </thead>
       <tbody>
         <!-- 書庫整備（旧幼稚園） -->
-        <tr><td class="g-grp g-grp-soko" colspan="17">■ 書庫整備（旧幼稚園）　→ この後、第2庁舎解体へと進む</td></tr>
         <tr>
-          <td class="g-lbl g-lbl-soko">構想・改修・書類移動</td>
+          <td class="g-lbl g-lbl-soko">
+            <span class="g-plan-name">■ 書庫整備（旧幼稚園）</span>
+            <span class="g-task-name">構想・改修・書類移動　→ この後、第2庁舎解体へと進む</span>
+          </td>
           <td class="g-soko-c1">構想</td>
           <td class="g-soko-c2 g-bar">改修工事</td>
           <td class="g-soko-c3 g-bar">書類移動</td>
@@ -1212,9 +1211,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- 解体撤去（PlanA・B） -->
-        <tr><td class="g-grp g-grp-com" colspan="17">■ 解体撤去工事（Plan A・Plan B）</td></tr>
         <tr>
-          <td class="g-lbl g-lbl-com">構想・設計・工事</td>
+          <td class="g-lbl g-lbl-com">
+            <span class="g-plan-name">■ 解体撤去工事（Plan A・Plan B）</span>
+            <span class="g-task-name">構想・設計・工事</span>
+          </td>
           <td class="g-com-c1">構想</td>
           <td class="g-com-c2 g-bar" colspan="3">設計（〜2027Q1）</td>
           <td class="g-com-c3 g-bar" colspan="3">工事（2027年度Q2〜Q4）</td>
@@ -1223,9 +1224,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- Plan A -->
-        <tr><td class="g-grp g-grp-a" colspan="17">■ Plan A　ピュアモルトクラブハウス＋蔵書棟　（供用：2030年度）</td></tr>
         <tr>
-          <td class="g-lbl g-lbl-a">構想・設計・工事</td>
+          <td class="g-lbl g-lbl-a">
+            <span class="g-plan-name">■ Plan A　ピュアモルト＋蔵書棟　供用：2030年度</span>
+            <span class="g-task-name">構想・設計・工事</span>
+          </td>
           <td class="g-a-c1" colspan="7">構想（〜2027年度）</td>
           <td class="g-a-c2 g-bar" colspan="4">設計（2028年度）</td>
           <td class="g-a-c3 g-bar" colspan="4">工事（2029年度）</td>
@@ -1234,9 +1237,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- Plan B -->
-        <tr><td class="g-grp g-grp-b" colspan="17">■ Plan B　現図書館跡地テナント入居（直営）　（供用：2028年度Q4）</td></tr>
         <tr>
-          <td class="g-lbl g-lbl-b">構想・設計・工事</td>
+          <td class="g-lbl g-lbl-b">
+            <span class="g-plan-name">■ Plan B　跡地テナント入居（直営）　供用：2028年度Q4</span>
+            <span class="g-task-name">構想・設計・工事</span>
+          </td>
           <td class="g-b-c1">構想</td>
           <td class="g-b-prop g-bar" colspan="2">プロポーザル・事業者選定</td>
           <td class="g-b-c2 g-bar" colspan="4">設計（〜2027年度）</td>
@@ -1247,9 +1252,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <!-- spacer -->
         <tr class="g-spacer"><td colspan="17"></td></tr>
         <!-- Plan C -->
-        <tr><td class="g-grp g-grp-c" colspan="17">■ Plan C　現図書館 リノベーション　（供用：2029年度）</td></tr>
         <tr>
-          <td class="g-lbl g-lbl-c">構想・設計・工事</td>
+          <td class="g-lbl g-lbl-c">
+            <span class="g-plan-name">■ Plan C　現図書館リノベーション　供用：2029年度</span>
+            <span class="g-task-name">構想・設計・工事</span>
+          </td>
           <td class="g-c-c1" colspan="3">構想</td>
           <td class="g-empty">　</td>
           <td class="g-c-c2 g-bar" colspan="2">設計（2027年度Q2〜Q3）</td>
