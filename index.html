@@ -168,7 +168,8 @@ thead th{color:#fff;padding:12px 14px;text-align:left;font-weight:600;font-size:
 tbody tr:nth-child(even){background:#F5F4F2}
 tbody tr:hover{background:#EDECEA}
 tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var(--color-fg);vertical-align:middle;line-height:1.55}
-.th-a{background:#3A4A4F!important;border-bottom:3px solid var(--plan-a-header)!important}.th-b{background:#3A4A4F!important;border-bottom:3px solid var(--plan-b-header)!important}.th-c{background:#3A4A4F!important;border-bottom:3px solid var(--plan-c-header)!important}
+.th-a{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}.th-b{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}.th-c{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}
+.row-divider td,.row-divider th{border-top:2px solid #999!important}
 .score-high{background:var(--color-positive-soft);font-weight:700;color:var(--color-positive)}
 .score-mid{background:var(--color-caution-soft);font-weight:700;color:var(--color-caution)}
 .score-low{background:var(--color-danger-soft);font-weight:700;color:var(--color-danger)}
@@ -754,7 +755,13 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     20年ベースでは Plan C が最安（2.33億円）だが、現図書館は築45年（1981年建設）。改修から20年後には築65年となり、
     躯体の耐用年数・設備更新コストが再度発生するリスクが高い。
     <strong>超長期ではPlan C のコスト優位性が低下する可能性がある。</strong>
-    また、Plan C を選択した場合でも将来的にピュアモルトクラブハウスの空調整備（約4.52億円）が別途必要となる点に注意。
+  </div>
+
+  <div style="margin-top:14px;padding:14px 18px;background:#FFF3CD;border-left:5px solid #E6A817;border-radius:6px;font-size:15px;line-height:1.8">
+    <span style="font-size:17px;font-weight:700;color:#8A5500">⚠️ Plan C 選択時の隠れリスク</span><br>
+    Plan C（現図書館改修）を選択した場合でも、<strong>ピュアモルトクラブハウスの空調整備（約4.52億円）は別途・将来的に必要</strong>となる。
+    この費用は Plan C の事業費には含まれておらず、実質的な町の財政負担は試算額を上回る可能性がある。
+    <strong style="color:#8A5500">Plan C の「低コスト」評価は、この潜在的支出を除外した数字である点に留意が必要。</strong>
   </div>
 
   <div class="note" style="margin-top:10px;font-size:16px">
@@ -1012,7 +1019,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
           <td style="text-align:right;color:var(--color-positive);font-weight:700">約2億3,500万円</td>
           <td style="text-align:center"><span style="background:var(--color-positive);color:#fff;padding:3px 10px;border-radius:4px;font-size:16px">28% ◎最小</span></td>
         </tr>
-        <tr>
+        <tr class="row-divider">
           <td class="th-c" style="font-weight:700">Plan C</td>
           <td style="text-align:right">約3億7,500万円</td>
           <td style="text-align:right">0</td>
