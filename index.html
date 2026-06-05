@@ -258,15 +258,15 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 /* ===== ガントチャート ===== */
 .gantt-wrap{overflow-x:auto;margin:0 0 16px;border-radius:8px;border:1px solid var(--color-border);background:var(--color-bg-surface)}
-.gantt-table{width:100%;border-collapse:collapse;font-size:16px;min-width:900px;table-layout:fixed}
-.gantt-table th,.gantt-table td{border:1px solid var(--color-border-subtle);padding:9px 5px;text-align:center;vertical-align:middle;line-height:1.5;overflow:hidden}
-.g-task-hd{background:var(--color-primary);color:#fff;font-weight:700;font-size:16px;padding:10px 12px;width:220px;min-width:220px;text-align:left}
-.g-y26{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
-.g-y27{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
-.g-y28{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
-.g-y29{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
-.g-y30{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:16px}
-.g-qhd{background:#EDECEA;color:#617279;font-weight:700;font-size:16px;padding:6px 2px}
+.gantt-table{width:100%;border-collapse:collapse;font-size:13px;min-width:960px;table-layout:fixed}
+.gantt-table th,.gantt-table td{border:1px solid var(--color-border-subtle);padding:6px 4px;text-align:center;vertical-align:middle;line-height:1.35;overflow:hidden}
+.g-task-hd{background:var(--color-primary);color:#fff;font-weight:700;font-size:14px;padding:10px 12px;width:220px;min-width:220px;text-align:left}
+.g-y26{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:13px}
+.g-y27{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:13px}
+.g-y28{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:13px}
+.g-y29{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:13px}
+.g-y30{background:#D8D4CF;color:#3A3530;font-weight:700;font-size:13px}
+.g-qhd{background:#EDECEA;color:#617279;font-weight:700;font-size:12px;padding:5px 2px}
 .g-lbl{text-align:left;font-size:14px;font-weight:600;background:#F5F4F2;padding:8px 10px;color:var(--color-fg);white-space:normal;line-height:1.4}
 .g-lbl .g-plan-name{font-size:13px;font-weight:700;color:#fff;display:block;margin:-8px -10px 6px;padding:5px 10px;letter-spacing:.02em}
 .g-lbl .g-task-name{font-size:13px;font-weight:600;color:var(--color-fg-muted);display:block}
@@ -275,31 +275,31 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 .g-lbl-c{border-left:4px solid var(--plan-c-header)}.g-lbl-c .g-plan-name{background:var(--plan-c-header)}
 .g-lbl-com{border-left:4px solid #546E7A}.g-lbl-com .g-plan-name{background:#546E7A}
 .g-empty{background:#F5F4F2}
-.g-bar{color:#fff;font-weight:700;font-size:16px}
-.g-com-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.gantt-table td.g-bar{color:#fff;font-weight:700;font-size:12px;text-align:left;padding-left:6px}
+.g-com-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:12px}
 .g-com-c2{background:#546E7A;color:#fff}
 .g-com-c3{background:#37474F;color:#fff}
-.g-a-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-a-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:12px}
 .g-a-c2{background:#4A6068;color:#fff}
 .g-a-c3{background:#3A4A4F;color:#fff}
-.g-b-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
-.g-b-prop{background:#D8D4CF;color:var(--color-fg);font-weight:700;font-size:16px}
+.g-b-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:12px}
+.gantt-table td.g-b-prop{background:#D8D4CF;color:var(--color-fg);font-weight:700;font-size:12px;text-align:left;padding-left:6px}
 .g-b-c2{background:#5A7A75;color:#fff}
 .g-b-c3{background:#4A6A66;color:#fff}
-.g-c-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-c-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:12px}
 .g-c-c2{background:#607D7A;color:#fff}
 .g-c-c3{background:#4A6562;color:#fff}
-.g-ms-a{background:#D8D4CF;color:#3A4A4F;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #3A4A4F}
-.g-ms-b{background:#D8D4CF;color:#4A6A66;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #4A6A66}
-.g-ms-c{background:#D8D4CF;color:#607D7A;font-weight:800;font-size:16px;line-height:1.4;border:2px solid #607D7A}
-.gantt-legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 4px;font-size:16px;align-items:center;padding:8px 12px;background:var(--color-bg-subtle);border-radius:6px}
+.g-ms-a{background:#D8D4CF;color:#3A4A4F;font-weight:800;font-size:13px;line-height:1.4;border:2px solid #3A4A4F}
+.g-ms-b{background:#D8D4CF;color:#4A6A66;font-weight:800;font-size:13px;line-height:1.4;border:2px solid #4A6A66}
+.g-ms-c{background:#D8D4CF;color:#607D7A;font-weight:800;font-size:13px;line-height:1.4;border:2px solid #607D7A}
+.gantt-legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 4px;font-size:14px;align-items:center;padding:8px 12px;background:var(--color-bg-subtle);border-radius:6px}
 .legend-item{display:flex;align-items:center;gap:5px}
-.legend-swatch{display:inline-block;width:20px;height:16px;border-radius:2px;flex-shrink:0}
-.gantt-note{font-size:16px;color:var(--color-fg-muted);margin-left:auto}
-.g-spacer td{height:36px;background:var(--color-bg);border-left:none;border-right:none;border-top:2px solid var(--color-border);border-bottom:none;padding:0}
+.legend-swatch{display:inline-block;width:18px;height:14px;border-radius:2px;flex-shrink:0}
+.gantt-note{font-size:13px;color:var(--color-fg-muted);margin-left:auto}
+.g-spacer td{height:28px;background:var(--color-bg);border-left:none;border-right:none;border-top:2px solid var(--color-border);border-bottom:none;padding:0}
 .g-grp-soko{background:#3A4A4F;color:#fff;border-left:5px solid #90A4AE}
 .g-lbl-soko{border-left:4px solid #90A4AE}.g-lbl-soko .g-plan-name{background:#546E7A}
-.g-soko-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:16px}
+.g-soko-c1{background:#EDECEA;color:var(--color-fg-muted);font-size:12px}
 .g-soko-c2{background:#607880;color:#fff}
 .g-soko-c3{background:#3A4A4F;color:#fff}
 /* ===== 答申書バッジ ===== */
@@ -1206,7 +1206,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
           <th class="g-y27" colspan="4">2027年度</th>
           <th class="g-y28" colspan="4">2028年度</th>
           <th class="g-y29" colspan="4">2029年度</th>
-          <th class="g-y30">2030年度</th>
+          <th class="g-y30">2030<br>年度</th>
         </tr>
         <tr>
           <th class="g-qhd">Q2</th><th class="g-qhd">Q3</th><th class="g-qhd">Q4</th>
