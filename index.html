@@ -168,7 +168,7 @@ thead tr{background:#3A4A4F}
 thead th{color:#fff;padding:12px 14px;text-align:left;font-weight:600;font-size:16px;white-space:nowrap}
 tbody tr:nth-child(even){background:#F5F4F2}
 tbody tr:hover{background:#EDECEA}
-tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var(--color-fg);vertical-align:middle;line-height:1.55}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--color-border);color:var(--color-fg);vertical-align:top;line-height:1.55}
 .th-a{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}.th-b{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}.th-c{background:#3A4A4F!important;color:#fff!important;border-bottom:1px solid var(--color-border)!important}
 .row-divider td,.row-divider th{border-top:2px solid #999!important}
 .score-high{background:var(--color-positive-soft);font-weight:700;color:var(--color-positive)}
@@ -560,9 +560,30 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         </tr>
         <tr>
           <td><strong>予算規模（概算）</strong></td>
-          <td><strong style="font-size:17px">約8億4,000万円</strong><br><small style="color:var(--color-positive)">補助金2.8億＋過疎債/公適債5.1億｜実質持出<strong style="color:var(--color-danger)">約2.35億（28%）</strong></small></td>
-          <td><strong style="font-size:17px">約2億2,500万円</strong><br><small style="color:var(--color-fg-muted)">イニシャルコストのみ（テナント料別途）</small><br><small style="color:var(--color-danger)">特定財源なし｜実質持出<strong>約7億0,500万円（30年累計・100%）</strong></small></td>
-          <td><strong style="font-size:17px">約3億7,500万円</strong><br><small style="color:var(--color-positive)">過疎債2.4億交付税措置（充当率90%）｜一般財源<strong style="color:var(--color-caution)">約1億3,900万円（37.0%）</strong></small></td>
+          <td style="vertical-align:top;padding-top:10px">
+            <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">総事業費</div>
+            <strong style="font-size:17px">約10億円</strong>
+            <div style="border-top:1px solid var(--color-border-subtle);margin-top:8px;padding-top:8px">
+              <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">実質持出</div>
+              <strong style="font-size:17px;color:var(--color-positive)">約2億7,100万円<span style="font-size:14px;font-weight:400">（27%）</span></strong>
+            </div>
+          </td>
+          <td style="vertical-align:top;padding-top:10px">
+            <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">総事業費（30年累計）</div>
+            <strong style="font-size:17px">約7億0,500万円</strong>
+            <div style="border-top:1px solid var(--color-border-subtle);margin-top:8px;padding-top:8px">
+              <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">実質持出（30年累計）</div>
+              <strong style="font-size:17px;color:var(--color-danger)">約7億0,500万円<span style="font-size:14px;font-weight:400">（100%）</span></strong>
+            </div>
+          </td>
+          <td style="vertical-align:top;padding-top:10px">
+            <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">総事業費</div>
+            <strong style="font-size:17px">約3億7,500万円</strong>
+            <div style="border-top:1px solid var(--color-border-subtle);margin-top:8px;padding-top:8px">
+              <div style="font-size:13px;color:var(--color-fg-muted);margin-bottom:2px">実質持出</div>
+              <strong style="font-size:17px;color:var(--color-caution)">約1億3,900万円<span style="font-size:14px;font-weight:400">（37%）</span></strong>
+            </div>
+          </td>
         </tr>
         <tr>
           <td><strong>工事スケジュール</strong></td>
@@ -578,7 +599,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         </tr>
         <tr>
           <td><strong>整備面積 / 計画蔵書数</strong></td>
-          <td>蔵書棟 約850〜950㎡<br><strong>85,000冊</strong>（開架51,000＋閉架34,000）</td>
+          <td>蔵書棟 約900㎡<br><strong>85,000冊</strong>（開架51,000＋閉架34,000）</td>
           <td>テナント 450㎡＋閉架書庫80㎡<br><strong style="color:var(--color-caution)">50,000冊</strong>（開架30,000＋閉架20,000）</td>
           <td>既存1F＋2F 約1,000㎡<br><strong style="color:var(--color-caution)">約44,000冊</strong>（開架約26,400＋閉架約17,600）</td>
         </tr>
@@ -623,8 +644,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   <div class="area-bar-wrap">
     <div class="area-bar-label">現図書館（現状・建物延床）：500㎡｜うち開架312㎡・蔵書86,000冊</div>
     <div class="area-bar" style="width:29%;background:#617279">500㎡</div>
-    <div class="area-bar-label">Plan A（蔵書棟）：約850〜950㎡｜蔵書85,000冊（開架51,000冊＋閉架34,000冊）</div>
-    <div class="area-bar" style="width:56%;background:var(--plan-a-header)">850〜950㎡</div>
+    <div class="area-bar-label">Plan A（蔵書棟）：約900㎡｜蔵書85,000冊（開架51,000冊＋閉架34,000冊）</div>
+    <div class="area-bar" style="width:56%;background:var(--plan-a-header)">900㎡</div>
     <div class="area-bar-label">Plan B（テナント＋別棟閉架書庫）：450㎡＋80㎡｜蔵書50,000冊（開架30,000＋閉架20,000）</div>
     <div class="area-bar" style="width:32%;background:var(--plan-b-header)">450㎡＋80㎡</div>
     <div class="area-bar-label">Plan C（1F＋2F改修）：約1,000㎡｜蔵書約44,000冊（開架26,400冊＋閉架17,600冊）</div>
@@ -637,7 +658,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <tr><th>比較項目</th><th style="background:#617279">現状（答申書）</th><th class="th-a">Plan A</th><th class="th-b">Plan B</th><th class="th-c">Plan C</th></tr>
       </thead>
       <tbody>
-        <tr><td>整備面積</td><td>500㎡（建物延床）<br><small style="color:var(--color-fg-muted)">うち開架：312㎡</small></td><td>約850〜950㎡（蔵書棟）</td><td>450㎡（テナント）＋80㎡（別棟閉架書庫）</td><td>約1,000㎡（既存1F＋2F改修）</td></tr>
+        <tr><td>整備面積</td><td>500㎡（建物延床）<br><small style="color:var(--color-fg-muted)">うち開架：312㎡</small></td><td>約900㎡（蔵書棟）</td><td>450㎡（テナント）＋80㎡（別棟閉架書庫）</td><td>約1,000㎡（既存1F＋2F改修）</td></tr>
         <tr><td>計画蔵書数（現状）</td><td><strong>86,000冊</strong><br><small style="color:var(--color-fg-muted)">開架61,000＋閉架書庫19,000＋移動図書館車（開架）6,000</small></td><td><strong style="color:var(--plan-a-header)">85,000冊（開架51,000＋閉架34,000）✅</strong></td><td><strong style="color:var(--color-caution)">50,000冊（開架30,000＋閉架20,000）</strong></td><td><strong style="color:var(--color-caution)">約44,000冊（開架約26,400＋閉架約17,600）</strong></td></tr>
         <tr><td>現有蔵書との差</td><td>基準</td><td>ほぼ維持（△1,000冊程度）</td><td>△36,000冊（86,000→50,000冊）</td><td><span style="color:var(--color-caution);font-weight:700">△42,000冊（要除籍整理）</span></td></tr>
         <tr><td>年間事業費</td><td>—</td><td>—</td><td><strong style="color:var(--color-caution)">テナント料 1,600万円/年（30年：約4億8,000万円）</strong></td><td>—</td></tr>
@@ -668,11 +689,11 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div class="warning-box">
     <strong>Plan B の「財源構造の罠」</strong><br>
-    30年間の名目総コストは Plan B（約7.05億円）&lt; Plan A（8.4億円）と Plan B が安く見える。
+    30年間の名目総コストは Plan B（約7.05億円）&lt; Plan A（約10億円）と Plan B が安く見える。
     <strong>しかし財源の質に根本的な差がある。</strong>
-    Plan A は補助金＋交付税措置により実質持出は<strong>約2.35億円（28%）</strong>。
+    Plan A は補助金＋交付税措置により実質持出は<strong>約2.71億円（27%）</strong>。
     一方 Plan B は補助金・交付税措置が一切なく整備費＋テナント料30年分（1,600万円/年）の全額が一般財源。
-    <strong>実質持出ベースの30年累計負担は Plan B 約7.05億円 対 Plan A 約2.35億円 ＝ 約3倍の差。</strong>
+    <strong>実質持出ベースの30年累計負担は Plan B 約7.05億円 対 Plan A 約2.71億円 ＝ 約2.6倍の差。</strong>
     ※テナント料は企画課試算（450㎡×10,000円/3.3㎡/月×12ヶ月）による。
   </div>
 
@@ -687,15 +708,15 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       </div>
       <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
         <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">名目事業費</div>
-        <strong style="font-size:16px">約8億4,000万円</strong>
+        <strong style="font-size:16px">約10億円</strong>
       </div>
       <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
         <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">財源軽減（補助金＋交付税）</div>
-        <strong style="font-size:16px;color:var(--color-positive)">約6億0,500万円</strong>
+        <strong style="font-size:16px;color:var(--color-positive)">約7億2,900万円</strong>
       </div>
       <div style="padding:12px 18px;background:var(--color-positive-soft);border-left:4px solid var(--color-positive)">
         <div style="font-size:14px;font-weight:700;color:var(--color-positive);margin-bottom:3px">★ 実質持出（整備費）</div>
-        <strong style="font-size:20px;color:var(--color-positive)">約2億3,500万円<span style="font-size:16px">（28%）</span></strong>
+        <strong style="font-size:20px;color:var(--color-positive)">約2億7,100万円<span style="font-size:16px">（27%）</span></strong>
       </div>
       <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
         <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">ランニングコスト</div>
@@ -703,7 +724,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       </div>
       <div style="padding:10px 18px;border-bottom:1px solid var(--color-border-subtle);background:var(--color-bg-surface)">
         <div style="font-size:14px;color:var(--color-fg-muted);margin-bottom:3px">30年累計実質持出</div>
-        <strong style="font-size:16px;color:var(--color-positive)">約2億3,500万円</strong>
+        <strong style="font-size:16px;color:var(--color-positive)">約2億7,100万円</strong>
       </div>
       <div style="padding:12px 18px;background:var(--color-positive-soft);font-size:15px;color:var(--color-positive)">
         補助金＋過疎債ダブル活用で実質持出が3プラン中最小
@@ -737,7 +758,7 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         <strong style="font-size:20px;color:var(--color-danger)">約7億500万円<span style="font-size:16px">（100%）</span></strong>
       </div>
       <div style="padding:12px 18px;background:var(--color-danger-soft);font-size:15px;color:var(--color-danger)">
-        実質持出30年累計はPlan Aの約3倍・Plan Cの約5倍
+        実質持出30年累計はPlan Aの約2.6倍・Plan Cの約5倍
       </div>
     </div>
 
@@ -780,8 +801,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
   <div class="plan-compare-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">
     <div style="background:var(--plan-a-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-a-header)">
       <div style="font-size:16px;font-weight:700;color:var(--plan-a-header);margin-bottom:8px">PLAN A（新築）</div>
-      <div style="font-size:24px;font-weight:700;color:var(--plan-a-header)">4.45億円</div>
-      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.35億 ＋ 修繕費2.10億</div>
+      <div style="font-size:24px;font-weight:700;color:var(--plan-a-header)">5.21億円</div>
+      <div style="font-size:16px;color:var(--color-fg-muted);margin-top:6px">実質持出2.71億 ＋ 修繕費2.50億</div>
       <div style="margin-top:8px;font-size:16px;color:var(--color-positive);font-weight:700">3プラン中2位</div>
     </div>
     <div style="background:var(--plan-b-soft);border-radius:var(--radius);padding:16px;border-top:4px solid var(--plan-b-header)">
@@ -847,8 +868,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <table style="font-size:15px;border-collapse:collapse;min-width:240px">
         <thead>
           <tr>
-            <th style="border:1px solid #ccc;padding:5px 10px;background:#f0f0f0;text-align:center">建　物</th>
-            <th style="border:1px solid #ccc;padding:5px 10px;background:#f0f0f0;text-align:right">延床面積（㎡）</th>
+            <th style="border:1px solid #ccc;padding:7px 12px;background:#e0e0e0;color:#333;font-weight:700;text-align:center;white-space:nowrap">建　物</th>
+            <th style="border:1px solid #ccc;padding:7px 12px;background:#e0e0e0;color:#333;font-weight:700;text-align:right;white-space:nowrap">延床面積（㎡）</th>
           </tr>
         </thead>
         <tbody>
@@ -869,18 +890,18 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <table style="font-size:15px;border-collapse:collapse;min-width:260px">
         <thead>
           <tr>
-            <th style="border:1px solid #ccc;padding:5px 10px;background:#f0f0f0;text-align:center">建　物</th>
-            <th style="border:1px solid #ccc;padding:5px 10px;background:#f0f0f0;text-align:right">延床面積（㎡）</th>
+            <th style="border:1px solid #ccc;padding:7px 12px;background:#e0e0e0;color:#333;font-weight:700;text-align:center;white-space:nowrap">建　物</th>
+            <th style="border:1px solid #ccc;padding:7px 12px;background:#e0e0e0;color:#333;font-weight:700;text-align:right;white-space:nowrap">延床面積（㎡）</th>
             <th style="border:1px solid #ccc;padding:5px 10px;background:#f0f0f0"></th>
           </tr>
         </thead>
         <tbody>
           <tr><td style="border:1px solid #ccc;padding:5px 10px">ピュアモルトクラブハウス</td><td style="border:1px solid #ccc;padding:5px 10px;text-align:right">990.16</td><td style="border:1px solid #ccc;padding:5px 10px"></td></tr>
-          <tr><td style="border:1px solid #ccc;padding:5px 10px">蔵書棟</td><td style="border:1px solid #ccc;padding:5px 10px;text-align:right">950.00</td><td style="border:1px solid #ccc;padding:5px 6px;color:var(--color-fg-muted);font-size:13px">仮</td></tr>
+          <tr><td style="border:1px solid #ccc;padding:5px 10px">蔵書棟</td><td style="border:1px solid #ccc;padding:5px 10px;text-align:right">900.00</td><td style="border:1px solid #ccc;padding:5px 6px;color:var(--color-fg-muted);font-size:13px"></td></tr>
           <tr style="background:#f5e0e0"><td style="border:1px solid #ccc;padding:5px 10px">図書館</td><td style="border:1px solid #ccc;padding:5px 10px;text-align:right">0.00</td><td style="border:1px solid #ccc;padding:5px 6px;color:var(--color-danger);font-size:13px;font-weight:700">解体</td></tr>
           <tr style="font-weight:700;background:var(--plan-a-soft)">
             <td style="border:1px solid #ccc;padding:5px 10px;text-align:center">合　計</td>
-            <td style="border:1px solid #ccc;padding:5px 10px;text-align:right">1,940.16</td>
+            <td style="border:1px solid #ccc;padding:5px 10px;text-align:right">1,890.16</td>
             <td style="border:1px solid #ccc;padding:5px 6px"></td>
           </tr>
         </tbody>
@@ -889,8 +910,8 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
     <!-- 判定 -->
     <div style="align-self:center;padding-top:24px;font-size:15px;line-height:1.8">
       <div style="color:var(--color-positive);font-weight:700;font-size:17px">✅ 集約化要件を充足</div>
-      <div style="color:var(--color-fg-muted)">整備前 2,134.52㎡ → 整備後 1,940.16㎡</div>
-      <div style="color:var(--color-fg-muted)">（<strong style="color:var(--color-danger)">△194.36㎡</strong> 減少）</div>
+      <div style="color:var(--color-fg-muted)">整備前 2,134.52㎡ → 整備後 1,890.16㎡</div>
+      <div style="color:var(--color-fg-muted)">（<strong style="color:var(--color-danger)">△244.36㎡</strong> 減少）</div>
     </div>
   </div>
   <div class="table-wrap" style="margin-bottom:24px">
@@ -925,28 +946,28 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
         </tr>
         <tr>
           <td>蔵書棟新設</td>
-          <td>蔵書棟新設工事・設計監理<br><small>社会資本整備交付金40%・過疎債充当率90%・交付税70%</small></td>
-          <td style="text-align:right">248,000</td>
-          <td style="text-align:right">99,200</td>
-          <td style="text-align:right">134,400</td>
-          <td style="text-align:right">94,080</td>
-          <td style="text-align:right;color:var(--color-danger)">54,720</td>
+          <td>蔵書棟新設工事（900㎡×40万円/㎡）＋設計管理費4,800万円<br><small>社会資本整備交付金40%・過疎債充当率90%・交付税70%</small></td>
+          <td style="text-align:right">408,000</td>
+          <td style="text-align:right">163,200</td>
+          <td style="text-align:right">220,320</td>
+          <td style="text-align:right">154,224</td>
+          <td style="text-align:right;color:var(--color-danger)">90,576</td>
         </tr>
         <tr style="background:var(--plan-a-soft);font-weight:700">
           <td colspan="2">合計</td>
-          <td style="text-align:right">840,000</td>
-          <td style="text-align:right">280,000</td>
-          <td style="text-align:right">505,400</td>
-          <td style="text-align:right">317,880</td>
-          <td style="text-align:right;color:var(--color-danger)">234,920</td>
+          <td style="text-align:right">1,000,000</td>
+          <td style="text-align:right">344,000</td>
+          <td style="text-align:right">591,320</td>
+          <td style="text-align:right">378,024</td>
+          <td style="text-align:right;color:var(--color-danger)">270,776</td>
         </tr>
         <tr style="background:var(--plan-a-soft)">
           <td colspan="2">合計（万円換算）</td>
-          <td style="text-align:right">約8億4,000万円</td>
-          <td style="text-align:right">約2億8,000万円</td>
-          <td style="text-align:right">約5億0,500万円</td>
-          <td style="text-align:right">約3億1,800万円</td>
-          <td style="text-align:right;color:var(--color-danger);font-size:16px"><strong>約2億3,500万円（28%）</strong></td>
+          <td style="text-align:right">約10億円</td>
+          <td style="text-align:right">約3億4,400万円</td>
+          <td style="text-align:right">約5億9,132万円</td>
+          <td style="text-align:right">約3億7,802万円</td>
+          <td style="text-align:right;color:var(--color-danger);font-size:16px"><strong>約2億7,100万円（27%）</strong></td>
         </tr>
       </tbody>
     </table>
@@ -1114,12 +1135,12 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
       <tbody>
         <tr>
           <td class="th-a" style="font-weight:700">Plan A</td>
-          <td style="text-align:right">約8億4,000万円</td>
-          <td style="text-align:right">約2億8,000万円</td>
-          <td style="text-align:right">約5億0,500万円</td>
-          <td style="text-align:right">約3億1,800万円</td>
-          <td style="text-align:right;color:var(--color-positive);font-weight:700">約2億3,500万円</td>
-          <td style="text-align:center"><span style="background:var(--color-positive);color:#fff;padding:3px 10px;border-radius:4px;font-size:16px">28% ◎最小</span></td>
+          <td style="text-align:right">約10億円</td>
+          <td style="text-align:right">約3億4,400万円</td>
+          <td style="text-align:right">約5億9,132万円</td>
+          <td style="text-align:right">約3億7,802万円</td>
+          <td style="text-align:right;color:var(--color-positive);font-weight:700">約2億7,100万円</td>
+          <td style="text-align:center"><span style="background:var(--color-positive);color:#fff;padding:3px 10px;border-radius:4px;font-size:16px">27% ◎最小</span></td>
         </tr>
         <tr class="row-divider">
           <td class="th-c" style="font-weight:700">Plan C</td>
@@ -1543,10 +1564,10 @@ footer{background:var(--color-primary-dark);color:rgba(255,255,255,.7);text-alig
 
   <div class="finance-section" style="margin-top:20px">
     <h4>事業費・財源計画（概算）</h4>
-    <div class="finance-row total"><span class="f-label">想定事業費合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約8億4,000万円</span></div>
-    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">① 社会資本整備交付金（補助率40%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">約3億4,500万円</span></div>
-    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">② 過疎債（充当率100%）+ 公適債（充当率90%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">起債合計 約4億6,800万円<br><small>うち交付税措置 約3億0,300万円</small></span></div>
-    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>実質持出分</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億3,500万円（28%）</span></div>
+    <div class="finance-row total"><span class="f-label">想定事業費合計</span><span class="f-value" style="color:var(--color-primary-dark);font-size:18px;font-weight:800">約10億円</span></div>
+    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">① 社会資本整備交付金（補助率40%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">約3億4,400万円</span></div>
+    <div class="finance-row" style="background:var(--color-positive-soft)"><span class="f-label">② 過疎債（充当率90%）+ 公適債（充当率90%）</span><span class="f-value" style="color:var(--color-positive);font-weight:700">起債合計 約5億9,132万円<br><small>うち交付税措置 約3億7,802万円</small></span></div>
+    <div class="finance-row" style="background:var(--color-caution-soft)"><span class="f-label"><strong>実質持出分</strong></span><span class="f-value" style="color:var(--color-danger);font-size:16px;font-weight:800">約2億7,100万円（27%）</span></div>
   </div>
 
   </div><!-- /pane-a -->
